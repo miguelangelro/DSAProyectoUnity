@@ -13,21 +13,21 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-       /* if (instance == null)
+        if (instance == null)
             instance = this;
 
         else if (instance != this)
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
-       */
+       
         boardScript = GetComponent<BoardManager>();
 
-        this.infoMapa = "25 25                    \n" +
+        infoMapa = "25 25                    \n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
                         "aacccccccccccccccccccccaa\n" +
-                        "aacvccccchhhhhhhcccccccaa\n" +
+                        "aaccccccchhhhhhhcccccccaa\n" +
                         "aacvcccccccccccccccccccaa\n" +
                         "aacvc               cccaa\n" +
                         "aacvc               cccaa\n" +
@@ -46,9 +46,17 @@ public class GameManager : MonoBehaviour
                         "aaccc               cvcaa\n" +
                         "aaccc               cvcaa\n" +
                         "aacccccccccccccccccccccaa\n" +
-                        "aaccchhhhcccchhhhcccccaa\n" +
+                        "aaccchhhhcccchhhhccccccaa\n" +
                         "aacccccccccccccccccccccaa\n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
+        
+       /* infoMapa =      "5 5  \n" +
+                        "aaaaa\n" +
+                        "aaaaa\n" +
+                        "aaccc\n" +
+                        "aacvc\n" +
+                        "aacvc\n";
+                       */
 
         InitGame();
     }
