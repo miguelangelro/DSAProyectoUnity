@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 public class BoardManager : MonoBehaviour
 {
     public GameObject acera;
+    
     public GameObject carretera;
     public GameObject carreteraVertical;
     public GameObject carreteraHorizontal;
@@ -15,6 +16,7 @@ public class BoardManager : MonoBehaviour
     public GameObject contorno;
     public GameObject[] cespedTiles;
     public GameObject[] bigben;
+    public GameObject[] virus; 
     float xmapa;
     float ymapa;
     private Transform boardHolder;
@@ -95,6 +97,9 @@ public class BoardManager : MonoBehaviour
                     case 'a':
                         instance = Instantiate(acera, new Vector2(xmapa, ymapa), Quaternion.identity);
                         break;
+                    /*case 'x':
+                        instance = Instantiate(Virus, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        break;*/
 
                     case 'b':
                         GameObject ben = Instantiate(bigben[i], new Vector2(xmapa, ymapa), Quaternion.identity);

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Doctor
   - bigben
+  - Virus
   layers:
   - Default
   - TransparentFX
