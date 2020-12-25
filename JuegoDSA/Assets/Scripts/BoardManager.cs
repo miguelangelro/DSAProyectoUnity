@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
+using System.Security.Cryptography;
 
 public class BoardManager : MonoBehaviour
 {
@@ -13,25 +14,30 @@ public class BoardManager : MonoBehaviour
     public GameObject player;
     public GameObject contorno;
     public GameObject[] cespedTiles;
+    public GameObject[] bigben;
     float xmapa;
     float ymapa;
     private Transform boardHolder;
     private Transform boardHolder2;
+    private Transform boardHolder3;
     //public int numMapa;
 
+    
 
     public void SetupScene(string conjuntoMapa) //paso el string con el diseño del mapa y info num filasxcolumnas y numero de nivel (se guarda en mapa), ejemplo: 25 25 1
     {
         string[] filas = conjuntoMapa.Split('\n');
         int xtotal = Convert.ToInt32(filas[0].Split(' ')[0]);
         int ytotal = Convert.ToInt32(filas[0].Split(' ')[1]);
-       // numMapa = Convert.ToInt32(filas[0].Split(' ')[2]); // mas adelante lo usare para saber en que mapa estamos
+        // numMapa = Convert.ToInt32(filas[0].Split(' ')[2]); // mas adelante lo usare para saber en que mapa estamos
 
         int x;
         int y;
+        int i = 0;
 
         boardHolder = new GameObject("Suelo").transform;
         boardHolder2 = new GameObject("Contorno").transform;
+        boardHolder3 = new GameObject("BigBen").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -62,7 +68,7 @@ public class BoardManager : MonoBehaviour
 
         for (y = 0; y < ytotal; y++)
         {
-            ymapa = -y + ytotal - 1; // invierto el sentido para poner bien en orden en el grid las cosas del mapa.
+            ymapa = -y + ytotal - 1; // invierto el sentido para poner bien en orden las cosas del mapa.
             string linea = filas[y + 1];
 
             for (x = 0; x < xtotal; x++)
@@ -70,7 +76,6 @@ public class BoardManager : MonoBehaviour
                 xmapa = x; // las x no se invierten pues ya muestran el orden correcto.
                 char[] charArr = linea.ToCharArray();
                 char c = charArr[x];// miro que caracter hay en esa posicion.
-
                 GameObject instance = null; //creo instancia para el suelo/cesped/carretera/acera ==> BoardHolder
 
                 switch (c)
@@ -91,9 +96,18 @@ public class BoardManager : MonoBehaviour
                         instance = Instantiate(acera, new Vector2(xmapa, ymapa), Quaternion.identity);
                         break;
 
+                    case 'b':
+                        GameObject ben = Instantiate(bigben[i], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        i++;
+                        ben.transform.SetParent(boardHolder3);
+                        if (i == 25)
+                            i = 0;
+                        break;
+
                     default: //si hay espacio en blanco coloco cesped del tipo 0 o 1, aleatoriamente.
                         GameObject toInstantiate = cespedTiles[Random.Range(0, cespedTiles.Length)];
-                        instance = Instantiate(toInstantiate, new Vector3(xmapa, ymapa, 0f), Quaternion.identity);
+                        instance = Instantiate(toInstantiate, new Vector2(xmapa, ymapa), Quaternion.identity);
                         break;
                 }
 
@@ -103,8 +117,4 @@ public class BoardManager : MonoBehaviour
         }
 
     }
-
-      
-   
-
 }

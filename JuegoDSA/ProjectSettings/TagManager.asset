@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Doctor
+  - bigben
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 1895393453
+    locked: 0
+  - name: item
+    uniqueID: 3629232327
     locked: 0
   - name: Units
     uniqueID: 2185384641

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
@@ -160,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b839171b6b94745dbaea22980afb196b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1526847036}
+  player: {fileID: 1733734394}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -188,7 +189,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18.103392
+  orthographic size: 12.252146
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -213,12 +214,26 @@ Transform:
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1293927141
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4382e973d87c74db08dc80c3e8f8818f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 2832602142263697643, guid: 77cbd84bcc2aa484690b65708cee6e7b,
+    type: 3}
+--- !u!1001 &1653983416
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -287,79 +302,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dad4fdd4b4f354ac6820955eff768345, type: 3}
---- !u!1 &1392573929
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1392573930}
-  - component: {fileID: 1392573932}
-  - component: {fileID: 1392573931}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1392573930
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392573929}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1392573931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392573929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32fe6f783f7934f6d8961f5b30b0a965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boardScript: {fileID: 0}
---- !u!114 &1392573932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392573929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e3e60eb229d4c339a619c7a06a236b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acera: {fileID: 6301808025143966049, guid: 6ed463cc6fc564fdc8df94171d92e384, type: 3}
-  carretera: {fileID: 1415766314132809244, guid: 47182ca4d957a44768be4f2b5375bf82,
-    type: 3}
-  carreteraVertical: {fileID: 8944731284223159154, guid: 4ed58a31bbb5d4b8fa0ab4db8e43b02b,
-    type: 3}
-  carreteraHorizontal: {fileID: 425436829516298711, guid: e8bddcb0114ff49a2a09ccd5e12e42dd,
-    type: 3}
-  player: {fileID: 0}
-  contorno: {fileID: 4582615976480553040, guid: f956792d8d4734a468f28207910cbe93,
-    type: 3}
-  cespedTiles:
-  - {fileID: 9203756896270672891, guid: ae7811b92f2d0431e8489346e80937e3, type: 3}
-  - {fileID: 5948556430029837693, guid: 1e0e328d91c7645179c52cc8322ea3df, type: 3}
---- !u!4 &1526847036 stripped
+--- !u!4 &1733734394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8455907355058010402, guid: dad4fdd4b4f354ac6820955eff768345,
     type: 3}
-  m_PrefabInstance: {fileID: 1293927141}
+  m_PrefabInstance: {fileID: 1653983416}
   m_PrefabAsset: {fileID: 0}

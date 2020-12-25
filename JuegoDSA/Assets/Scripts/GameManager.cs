@@ -31,18 +31,18 @@ public class GameManager : MonoBehaviour
                         "aacvcccccccccccccccccccaa\n" +
                         "aacvc               cccaa\n" +
                         "aacvc               cccaa\n" +
-                        "aaccc               cccaa\n" +
-                        "aaccc               cccaa\n" +
-                        "aaccc               cvcaa\n" +
-                        "aaccc               cvcaa\n" +
-                        "aacvc               cvcaa\n" +
-                        "aacvc               cvcaa\n" +
-                        "aacvc               cccaa\n" +
-                        "aacvc               cccaa\n" +
-                        "aaccc               cccaa\n" +
-                        "aaccc               cccaa\n" +
-                        "aaccc               cvcaa\n" +
-                        "aaccc               cvcaa\n" +
+                        "aaccc      bb       cccaa\n" +
+                        "aaccc      bb       cccaa\n" +
+                        "aaccc      bb       cvcaa\n" +
+                        "aaccc      bb       cvcaa\n" +
+                        "aacvc      bb       cvcaa\n" +
+                        "aacvc      bb       cvcaa\n" +
+                        "aacvc      bb       cccaa\n" +
+                        "aacvc      bb       cccaa\n" +
+                        "aaccc      bb       cccaa\n" +
+                        "aaccc      bb       cccaa\n" +
+                        "aaccc      bb       cvcaa\n" +
+                        "aaccc      bb       cvcaa\n" +
                         "aaccc               cvcaa\n" +
                         "aaccc               cvcaa\n" +
                         "aacccccccccccccccccccccaa\n" +
