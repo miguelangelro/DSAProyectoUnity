@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
+
+    void Start()
+    {
+        player = GameObject.Find("Player(Clone)");
+    }
 
     void FixedUpdate() {
 
-        transform.position = new Vector2(player.position.x,player.position.y);
+        transform.position = new Vector2(player.transform.position.x,player.transform.position.y);
     }
 }

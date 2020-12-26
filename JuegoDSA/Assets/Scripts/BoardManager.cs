@@ -8,7 +8,6 @@ using System.Security.Cryptography;
 public class BoardManager : MonoBehaviour
 {
     public GameObject acera;
-    
     public GameObject carretera;
     public GameObject carreteraVertical;
     public GameObject carreteraHorizontal;
@@ -22,6 +21,7 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder;
     private Transform boardHolder2;
     private Transform boardHolder3;
+    private Transform boardHolder4;
     //public int numMapa;
 
     
@@ -40,6 +40,7 @@ public class BoardManager : MonoBehaviour
         boardHolder = new GameObject("Suelo").transform;
         boardHolder2 = new GameObject("Contorno").transform;
         boardHolder3 = new GameObject("BigBen").transform;
+        boardHolder4 = new GameObject("Jugadores").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -67,6 +68,7 @@ public class BoardManager : MonoBehaviour
             outerwall.transform.SetParent(boardHolder2);
         }
 
+        //Empieza a pintar el mapa según el tipo de carácter.
 
         for (y = 0; y < ytotal; y++)
         {
@@ -108,6 +110,14 @@ public class BoardManager : MonoBehaviour
                         ben.transform.SetParent(boardHolder3);
                         if (i == 25)
                             i = 0;
+                        break;
+
+                    case '@': //Aqui supongo que el jugador esta de pie en cesped.
+                        GameObject jugador = Instantiate(player, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        PlayerMovement jug = jugador.GetComponent<PlayerMovement>();
+                        jug.SetPosition(xmapa,ymapa);
+                        jugador.transform.SetParent(boardHolder4);
                         break;
 
                     default: //si hay espacio en blanco coloco cesped del tipo 0 o 1, aleatoriamente.

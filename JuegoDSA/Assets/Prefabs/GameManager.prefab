@@ -51,7 +51,7 @@ MonoBehaviour:
     type: 3}
   carreteraHorizontal: {fileID: 425436829516298711, guid: e8bddcb0114ff49a2a09ccd5e12e42dd,
     type: 3}
-  player: {fileID: 0}
+  player: {fileID: 8455907355058010400, guid: dad4fdd4b4f354ac6820955eff768345, type: 3}
   contorno: {fileID: 4582615976480553040, guid: f956792d8d4734a468f28207910cbe93,
     type: 3}
   cespedTiles:
@@ -84,6 +84,7 @@ MonoBehaviour:
   - {fileID: 8748034791189174420, guid: 5fa4bf91d52da4b23aca07125fa279a5, type: 3}
   - {fileID: 4596807858167010444, guid: a76671619b88c49638fe179bd6dd0c62, type: 3}
   - {fileID: 7813870435730154717, guid: 427de16c2f3ff46658d97e29e82faa4d, type: 3}
+  virus: []
 --- !u!114 &2832602142263697641
 MonoBehaviour:
   m_ObjectHideFlags: 0
