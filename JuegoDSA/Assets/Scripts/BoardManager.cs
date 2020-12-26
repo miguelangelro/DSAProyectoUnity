@@ -22,9 +22,10 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder2;
     private Transform boardHolder3;
     private Transform boardHolder4;
+    private Transform boardHolder5;
     //public int numMapa;
 
-    
+
 
     public void SetupScene(string conjuntoMapa) //paso el string con el diseño del mapa y info num filasxcolumnas y numero de nivel (se guarda en mapa), ejemplo: 25 25 1
     {
@@ -41,6 +42,7 @@ public class BoardManager : MonoBehaviour
         boardHolder2 = new GameObject("Contorno").transform;
         boardHolder3 = new GameObject("BigBen").transform;
         boardHolder4 = new GameObject("Jugadores").transform;
+        boardHolder5 = new GameObject("Virus").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -99,9 +101,22 @@ public class BoardManager : MonoBehaviour
                     case 'a':
                         instance = Instantiate(acera, new Vector2(xmapa, ymapa), Quaternion.identity);
                         break;
-                    /*case 'x':
-                        instance = Instantiate(Virus, new Vector2(xmapa, ymapa), Quaternion.identity);
-                        break;*/
+
+                    case 'x': //Virus
+                        GameObject covid = Instantiate(virus[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre cesped (ejemplo)
+                        VirusController v = covid.GetComponent<VirusController>();
+                        v.SetPosition(xmapa, ymapa);
+                        covid.transform.SetParent(boardHolder5);
+                        break;
+
+                    case 'X': //Virus2
+                        GameObject cepa = Instantiate(virus[1], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre la carretera (ejemplo)
+                        VirusController vi = cepa.GetComponent<VirusController>();
+                        vi.SetPosition(xmapa,ymapa);
+                        cepa.transform.SetParent(boardHolder5);
+                        break;
 
                     case 'b':
                         GameObject ben = Instantiate(bigben[i], new Vector2(xmapa, ymapa), Quaternion.identity);

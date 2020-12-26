@@ -84,7 +84,9 @@ MonoBehaviour:
   - {fileID: 8748034791189174420, guid: 5fa4bf91d52da4b23aca07125fa279a5, type: 3}
   - {fileID: 4596807858167010444, guid: a76671619b88c49638fe179bd6dd0c62, type: 3}
   - {fileID: 7813870435730154717, guid: 427de16c2f3ff46658d97e29e82faa4d, type: 3}
-  virus: []
+  virus:
+  - {fileID: 1898741779791224627, guid: dd328b8fb7251864b927afb99deb863a, type: 3}
+  - {fileID: 6106427356569002996, guid: 7cce9734494aa704c9aae1d176c16c22, type: 3}
 --- !u!114 &2832602142263697641
 MonoBehaviour:
   m_ObjectHideFlags: 0

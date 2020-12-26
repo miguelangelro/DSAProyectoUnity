@@ -8,7 +8,10 @@ public class VirusController : MonoBehaviour
 
     public float delta = 1.5f;
     public float velocidad = 2.0f;
-    private Vector3 startPos;
+    private Vector2 startPos;
+    float posx;
+    float posy;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //gameObject.SetActive(false); //de esta manera el virus desaparce pero no se destruye. Esto es intersante y se podria hacer
@@ -20,15 +23,22 @@ public class VirusController : MonoBehaviour
 
     void Start()
     {
-        startPos = transform.position;//para iniciar en la posicion que queramos
+        transform.position = new Vector2(this.posx, this.posy);//Se inicia en la posicion que ocupa el carácter
+        startPos = transform.position;
     }
 
     void Update()
     {
-        Vector3 v = startPos;
+        Vector2 v = startPos;
         v.x += delta * Mathf.Sin(Time.time * velocidad);
         transform.position = v;
     }
 
-    
+    public void SetPosition(float x, float y)
+    {
+        this.posx = x;
+        this.posy = y;
+
+    }
+
 }
