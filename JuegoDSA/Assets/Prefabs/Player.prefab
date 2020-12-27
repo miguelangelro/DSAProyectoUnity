@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8455907355058010403}
   - component: {fileID: 8455907355058010405}
   - component: {fileID: -5650542908084650960}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -124,7 +124,6 @@ MonoBehaviour:
   animator: {fileID: 8455907355058010405}
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 0}
 --- !u!95 &8455907355058010405
 Animator:
   serializedVersion: 3
