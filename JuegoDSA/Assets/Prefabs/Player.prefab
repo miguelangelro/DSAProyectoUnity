@@ -123,6 +123,7 @@ MonoBehaviour:
   rb: {fileID: 8455907355058010404}
   animator: {fileID: 8455907355058010405}
   maxHealth: 100
+  currentHealth: 0
   healthBar: {fileID: 0}
 --- !u!95 &8455907355058010405
 Animator:

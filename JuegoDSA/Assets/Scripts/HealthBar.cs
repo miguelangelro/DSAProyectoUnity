@@ -10,7 +10,26 @@ public class HealthBar : MonoBehaviour
 
     public Gradient gradient;
     public Image fill;
+    public GameObject player;
+    PlayerMovement jug;
+    void Start()
+    {
+        
+        //slider = GameObject.Find("HealthBar").GetComponent<Slider>();
+        //fill = GameObject.Find("Fill").GetComponent<Image>();
 
+        player = GameObject.Find("Player(Clone)");
+        jug = player.GetComponent<PlayerMovement>();
+        SetMaxHealth(jug.maxHealth);
+
+
+
+    }
+
+    void Update()
+    {
+        SetHealth(jug.currentHealth);
+    }
 
     public void SetMaxHealth(int health)
     {

@@ -17,12 +17,12 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth = 100; //vida maxima del player
     public int currentHealth;
 
-    public HealthBar healthBar;
+    //public HealthBar healthBar;
 
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //healthBar.SetMaxHealth(maxHealth);
         transform.position = new Vector2(this.posx, this.posy);//para iniciar en la posicion que queramos
     }
 
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         currentHealth -= damage;
 
-        healthBar.SetHealth(currentHealth);
+        //healthBar.SetHealth(currentHealth);
 
         if(currentHealth <= 0)
         {
