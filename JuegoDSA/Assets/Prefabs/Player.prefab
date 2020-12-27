@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8455907355058010403}
   - component: {fileID: 8455907355058010405}
   - component: {fileID: -5650542908084650960}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -122,6 +122,8 @@ MonoBehaviour:
   moveSpeed: 2.5
   rb: {fileID: 8455907355058010404}
   animator: {fileID: 8455907355058010405}
+  maxHealth: 100
+  healthBar: {fileID: 0}
 --- !u!95 &8455907355058010405
 Animator:
   serializedVersion: 3
@@ -153,7 +155,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
