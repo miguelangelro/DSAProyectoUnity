@@ -124,6 +124,9 @@ MonoBehaviour:
   animator: {fileID: 8455907355058010405}
   maxHealth: 100
   currentHealth: 0
+  blockingLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!95 &8455907355058010405
 Animator:
   serializedVersion: 3

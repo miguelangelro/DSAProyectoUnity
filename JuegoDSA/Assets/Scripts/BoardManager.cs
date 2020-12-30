@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 public class BoardManager : MonoBehaviour
 {
     public GameObject acera;
+    public GameObject[] ciudadano;
     public GameObject carretera;
     public GameObject carreteraVertical;
     public GameObject carreteraHorizontal;
@@ -125,6 +126,12 @@ public class BoardManager : MonoBehaviour
                         ben.transform.SetParent(boardHolder3);
                         if (i == 25)
                             i = 0;
+                        break;
+
+                    case 'p':
+                        GameObject person = Instantiate(ciudadano[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        person.transform.SetParent(boardHolder4);
                         break;
 
                     case '@': //Aqui supongo que el jugador esta de pie en cesped.
