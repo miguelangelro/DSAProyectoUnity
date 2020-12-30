@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth = 100; //vida maxima del player
     public int currentHealth;
 
+   
+
     private BoxCollider2D boxCollider;      //The BoxCollider2D component attached to this object.
     public LayerMask blockingLayer;         //Layer on which collision will be checked.
 
@@ -56,29 +58,22 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        float horizontal = 0;
-        float vertical = 0;
+        movement.x = Input.GetAxisRaw("Horizontal");
 
+        movement.y= Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-
-        vertical = Input.GetAxisRaw("Vertical");
-
-
-        if (horizontal != 0 || vertical != 0)
+        if (movement.x != 0 || movement.y != 0)
         {
-            RaycastHit2D hit;
-            Move(horizontal, vertical, out hit);
+
+            Move(movement.x, movement.y);
         }
 
     }
 
-    void Movimiento(Vector2 movement)
-    {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-
-    }
+    
 
     public void SetPosition(float x, float y)
     {
@@ -87,9 +82,9 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void Move(float xDir, float yDir, out RaycastHit2D hit)
+    void Move(float xDir, float yDir)
     {
-
+        RaycastHit2D hit;
         Vector2 start = transform.position;
         Vector2 end = start + new Vector2(xDir, yDir);
 
@@ -101,11 +96,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (hit.transform == null)
         {
-            Movimiento(end);
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
-
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+           
         }
 
 
