@@ -22,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;      //The BoxCollider2D component attached to this object.
     public LayerMask blockingLayer;         //Layer on which collision will be checked.
 
+    public AudioClip playerDañado;
+    public AudioClip muerte;
+
+
 
     void Start()
     {
@@ -34,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        SoundManager.instance.PlaySingle(playerDañado);
+        SoundManager.instance.PlaySingle(playerDañado);
         currentHealth -= damage;
 
         //healthBar.SetHealth(currentHealth);
@@ -46,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Die()
     {
+        SoundManager.instance.PlaySingle(muerte);
+        SoundManager.instance.musicSource.Stop();
         Debug.Log("Has muerto, falta poner una animacion de morision kisde");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
@@ -102,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+
 
     public float getPosX()
     {

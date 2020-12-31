@@ -127,6 +127,8 @@ MonoBehaviour:
   blockingLayer:
     serializedVersion: 2
     m_Bits: 256
+  "playerDa\xF1ado": {fileID: 8300000, guid: ce37832042819684b98658c38caee287, type: 3}
+  muerte: {fileID: 8300000, guid: 060e0e33edba54140abff42165f9fa37, type: 3}
 --- !u!95 &8455907355058010405
 Animator:
   serializedVersion: 3

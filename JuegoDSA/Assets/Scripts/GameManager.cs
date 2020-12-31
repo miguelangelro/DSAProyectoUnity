@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
                         "aacvc      bb       cvcaa\n" +
                         "aacvc      bb       cccaa\n" +
                         "aacvc      bb       cccaa\n" +
-                        "aaccc      bb       cccaa\n" +
+                        "aaccc      bb     x cccaa\n" +
                         "aaccc      bb       cccaa\n" +
                         "aaccc      bb       cvcaa\n" +
                         "aaccc      bb       cvcaa\n" +
