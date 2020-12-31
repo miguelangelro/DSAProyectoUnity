@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxHealth = 100; //vida maxima del player
     public int currentHealth;
-
    
 
     private BoxCollider2D boxCollider;      //The BoxCollider2D component attached to this object.
@@ -36,6 +35,15 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector2(this.posx, this.posy);//para iniciar en la posicion que queramos
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(gameObject.CompareTag("Coins"))
+            Destroy(gameObject);
+
+
+
+    }
+
     public void TakeDamage(int damage)
     {
         SoundManager.instance.PlaySingle(playerDañado);
@@ -49,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
             Die();
         }
     }
+
 
     void Die()
     {
