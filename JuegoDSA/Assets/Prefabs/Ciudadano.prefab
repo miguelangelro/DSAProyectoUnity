@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7952365642782121648}
   - component: {fileID: 7952365642782121651}
   - component: {fileID: 31111218972798821}
+  - component: {fileID: 1428546752617213980}
   m_Layer: 8
   m_Name: Ciudadano
   m_TagString: Untagged
@@ -39,19 +40,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7952365642782121650}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e8080eac19a642adb306ca88356ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 1
   startWaitTime: 3
   moveSpot: {fileID: 8892056425671054650, guid: 598012ca291a1400ea1d845d2a14759b,
     type: 3}
-  minX: 10
-  maxX: 880
-  minY: 10
-  maxY: 480
+  minX: 14
+  maxX: 18
+  minY: 7
+  maxY: 11
 --- !u!212 &31111218972798821
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -103,3 +104,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1428546752617213980
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7952365642782121650}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

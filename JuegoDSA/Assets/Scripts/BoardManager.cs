@@ -131,6 +131,8 @@ public class BoardManager : MonoBehaviour
                     case 'p':
                         GameObject person = Instantiate(ciudadano[0], new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        MovimientoAleatorio mov = person.GetComponent<MovimientoAleatorio>();
+                        mov.SetPosition(xmapa, ymapa);
                         person.transform.SetParent(boardHolder4);
                         break;
 

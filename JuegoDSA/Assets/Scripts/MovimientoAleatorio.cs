@@ -15,6 +15,9 @@ public class MovimientoAleatorio : MonoBehaviour
     public float minY;
     public float maxY; //marcan los limites de donde se  movera
 
+    float posx;
+    float posy;
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,5 +47,12 @@ public class MovimientoAleatorio : MonoBehaviour
 
         }
         
+    }
+
+    public void SetPosition(float x, float y)
+    {
+        this.posx = x;
+        this.posy = y;
+
     }
 }
