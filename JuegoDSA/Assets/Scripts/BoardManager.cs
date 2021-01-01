@@ -10,6 +10,7 @@ public class BoardManager : MonoBehaviour
     public GameObject acera;
     public GameObject[] ciudadano;
     public GameObject carretera;
+    public GameObject moneda;
     public GameObject carreteraVertical;
     public GameObject carreteraHorizontal;
     public GameObject player;
@@ -24,6 +25,7 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder3;
     private Transform boardHolder4;
     private Transform boardHolder5;
+    private Transform boardHolder6;
     //public int numMapa;
 
 
@@ -44,6 +46,7 @@ public class BoardManager : MonoBehaviour
         boardHolder3 = new GameObject("BigBen").transform;
         boardHolder4 = new GameObject("Jugadores").transform;
         boardHolder5 = new GameObject("Virus").transform;
+        boardHolder6 = new GameObject("Items").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -126,6 +129,14 @@ public class BoardManager : MonoBehaviour
                         ben.transform.SetParent(boardHolder3);
                         if (i == 25)
                             i = 0;
+                        break;
+
+                    case 'g':
+                        GameObject oro = Instantiate(moneda, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        Coin or = oro.GetComponent<Coin>();
+                        or.SetPosition(xmapa, ymapa);
+                        oro.transform.SetParent(boardHolder6);
                         break;
 
                     case 'p':

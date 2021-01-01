@@ -12,8 +12,7 @@ public class Coin : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector2(this.posx, this.posy);//Se inicia en la posicion que ocupa el carácter
-        startPos = transform.position;
+        transform.position = new Vector2(this.posx, this.posy);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
