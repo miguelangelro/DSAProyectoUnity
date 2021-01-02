@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -70, y: -24}
+  m_AnchoredPosition: {x: -107.9, y: -21.2}
   m_SizeDelta: {x: 563, y: 564}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335205128
@@ -323,8 +323,8 @@ MonoBehaviour:
   target: {fileID: 8455907355058010402, guid: dad4fdd4b4f354ac6820955eff768345, type: 3}
   Player: {fileID: 8455907355058010400, guid: dad4fdd4b4f354ac6820955eff768345, type: 3}
   smoothing: 0.1
-  maxPosition: {x: 16.65, y: 20.44}
-  minPosition: {x: 7.44, y: 3.55}
+  maxPosition: {x: 200, y: 200}
+  minPosition: {x: 0, y: 0}
 --- !u!224 &1072852304 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4899040159919816317, guid: c357c6fe741a54fc4ab91b77584cbbb4,
@@ -812,7 +812,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 24, y: -28}
+  m_AnchoredPosition: {x: -19.599976, y: -23.299988}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &4899040161015807601

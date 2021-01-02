@@ -35,14 +35,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector2(this.posx, this.posy);//para iniciar en la posicion que queramos
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(gameObject.CompareTag("Coin"))
-            Destroy(gameObject);
-
-
-
-    }
+   
 
     public void TakeDamage(int damage)
     {
