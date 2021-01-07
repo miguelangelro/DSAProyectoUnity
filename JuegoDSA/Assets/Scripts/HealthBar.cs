@@ -28,7 +28,14 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        SetHealth(jug.currentHealth);
+        if(jug==null)
+        {
+            Debug.Log("hay algo");
+        }
+        else
+        {
+            SetHealth(jug.currentHealth);
+        }
     }
 
     public void SetMaxHealth(int health)
