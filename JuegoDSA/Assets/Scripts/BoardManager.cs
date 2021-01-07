@@ -15,6 +15,7 @@ public class BoardManager : MonoBehaviour
     public GameObject carreteraHorizontal;
     public GameObject player;
     public GameObject contorno;
+    public GameObject plane;
     public GameObject[] cespedTiles;
     public GameObject[] bigben;
     public GameObject[] virus; 
@@ -26,6 +27,7 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder4;
     private Transform boardHolder5;
     private Transform boardHolder6;
+    private Transform boardHolder7;
     //public int numMapa;
 
 
@@ -47,6 +49,7 @@ public class BoardManager : MonoBehaviour
         boardHolder4 = new GameObject("Jugadores").transform;
         boardHolder5 = new GameObject("Virus").transform;
         boardHolder6 = new GameObject("Items").transform;
+        boardHolder7 = new GameObject("Plane").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -104,6 +107,10 @@ public class BoardManager : MonoBehaviour
 
                     case 'a':
                         instance = Instantiate(acera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        break;
+
+                    case 'A':
+                        instance = Instantiate(plane, new Vector2(xmapa, ymapa), Quaternion.identity);
                         break;
 
                     case 'x': //Virus

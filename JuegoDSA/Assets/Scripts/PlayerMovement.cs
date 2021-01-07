@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,7 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxHealth = 100; //vida maxima del player
     public int currentHealth;
-   
+
+    public float restartLevelDelay = 1f;
+
+    public Animator transition;
+    public float tiempoEsperaAvion = 1f;
+    public float transitionTime = 1f;
 
     private BoxCollider2D boxCollider;      //The BoxCollider2D component attached to this object.
     public LayerMask blockingLayer;         //Layer on which collision will be checked.
@@ -83,7 +89,28 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //Check if the tag of the trigger collided with is Exit.
+        if (other.tag == "Plane")
+        {
+            LoadLevel();
+            Invoke("Restart", restartLevelDelay);
+
+        }
+    }
+
+    IEnumerator LoadLevel()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+    }
+
+    private void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+    }
+
 
     public void SetPosition(float x, float y)
     {
