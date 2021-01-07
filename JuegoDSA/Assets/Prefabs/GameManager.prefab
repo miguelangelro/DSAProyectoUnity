@@ -45,8 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acera: {fileID: 6301808025143966049, guid: 6ed463cc6fc564fdc8df94171d92e384, type: 3}
+  ciudadano:
+  - {fileID: 7952365642782121650, guid: 839b120f102ed41ddbac83283d1999bb, type: 3}
   carretera: {fileID: 1415766314132809244, guid: 47182ca4d957a44768be4f2b5375bf82,
     type: 3}
+  moneda: {fileID: 2892773585125654589, guid: f4ef34536e578304c867382e2d9d5ae8, type: 3}
   carreteraVertical: {fileID: 8944731284223159154, guid: 4ed58a31bbb5d4b8fa0ab4db8e43b02b,
     type: 3}
   carreteraHorizontal: {fileID: 425436829516298711, guid: e8bddcb0114ff49a2a09ccd5e12e42dd,

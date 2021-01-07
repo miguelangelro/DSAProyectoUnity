@@ -23,32 +23,58 @@ public class GameManager : MonoBehaviour
        
         boardScript = GetComponent<BoardManager>();
 
-        infoMapa = "25 25                    \n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
-                        "aacccccccccccccccccccccaa\n" +
-                        "aaccccccchhhhhhhcccccccaa\n" +
-                        "aacvcccccccccccccccccccaa\n" +
-                        "aacvc               cccaa\n" +
-                        "aacvc               cccaa\n" +
-                        "aaccc      bb       cccaa\n" +
-                        "aaccc      bb       cccaa\n" +
-                        "aaccc      bb       cvcaa\n" +
-                        "aaccc      bb       cvcaa\n" +
-                        "aacvc      bb       cvcaa\n" +
-                        "aacvc      bb       cvcaa\n" +
-                        "aacvc      bb       cccaa\n" +
-                        "aacvc      bb       cccaa\n" +
-                        "aaccc      bb     x cccaa\n" +
-                        "aaccc      bb   x   cccaa\n" +
-                        "aaccc      bb  x    cvcaa\n" +
-                        "aaccc      bb       cvcaa\n" +
-                        "aaccc           x   cvcaa\n" +
-                        "aaccc       @       cvcaa\n" +
-                        "aaccccccccccccccccXccccaa\n" +
-                        "aaccchhhhcccchhhhccccccaa\n" +
-                        "aacccccccccccccccccccccaa\n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
+        infoMapa = "50 50                    \n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
+                        "aacccccccccccccccccccccaa                         \n" +
+                        "aaccccccchhhhhhhcccccccaa                         \n" +
+                        "aacvcccccccccccccccccccaa                         \n" +
+                        "aacvc               cccaa                         \n" +
+                        "aacvc               cccaa                         \n" +
+                        "aaccc      bb       cccaa                         \n" +
+                        "aaccc      bb       cccaa                         \n" +
+                        "aaccc      bb       cvcaa                         \n" +
+                        "aaccc      bb       cvcaa                         \n" +
+                        "aacvc      bb       cvcaa                         \n" +
+                        "aacvc      bb       cvcaa                         \n" +
+                        "aacvc      bb       cccaa                         \n" +
+                        "aacvc      bb       cccaa                         \n" +
+                        "aaccc      bb       cccaa                         \n" +
+                        "aaccc  x   bb       cccaa                         \n" +
+                        "aaccc  x   bb       cvcaa                         \n" +
+                        "aaccc      bb       cvcaa                         \n" +
+                        "aaccc           p   cvcaa                         \n" +
+                        "aaccc  gg   @   g   cvcaa                         \n" +
+                        "aacvcccccccccccccccccccaa                         \n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                           g                      \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n" +
+                        "                                                  \n";
+                        
         
        /* infoMapa =      "5 5  \n" +
                         "aaaaa\n" +

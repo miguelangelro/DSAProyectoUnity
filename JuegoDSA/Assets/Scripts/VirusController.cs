@@ -11,6 +11,7 @@ public class VirusController : MonoBehaviour
     private Vector2 startPos;
     float posx;
     float posy;
+    public bool dañado=false;
 
     public Animator animator;
 
@@ -39,10 +40,12 @@ public class VirusController : MonoBehaviour
 
         foreach (Collider2D player in hit) // para todos los jugadors dañalos
         {
-            player.GetComponent<PlayerMovement>().TakeDamage(attackDamage);
+            
+                player.GetComponent<PlayerMovement>().TakeDamage(attackDamage);
+   
         
-        } 
-
+        }
+        
 
     }
 
@@ -64,7 +67,7 @@ public class VirusController : MonoBehaviour
     void Update()
     {
         Vector2 v = startPos;
-        v.x += delta * Mathf.Sin(Time.time * velocidad);
+        v.x += delta * Mathf.Sin(Time.time * velocidad); // hace un efecto de movimiento mas fluido con la funcion sin
         transform.position = v;
     }
 
