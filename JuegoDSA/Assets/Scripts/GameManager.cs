@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +12,8 @@ public class GameManager : MonoBehaviour
     public BoardManager boardScript;
     public static GameManager instance = null;
     string infoMapa;
-
-
+    
+    private int level = 0;
     public void Awake()
     {
         if (instance == null)
@@ -22,8 +25,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
        
         boardScript = GetComponent<BoardManager>();
-
-        infoMapa = "50 50                    \n" +
+        instance.level++;
+        if (instance.level == 1)
+        {
+            infoMapa = "50 50                    \n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
                         "aacccccccccccccccccccccaa                         \n" +
@@ -45,7 +50,7 @@ public class GameManager : MonoBehaviour
                         "aaccc      bb       cvcaa                         \n" +
                         "aaccc           p   cvcaa                         \n" +
                         "aaccc  gg   @   g   cvcaa                         \n" +
-                        "aacvcccccccccccccccccccaa                         \n" +
+                        "aacvccccAccccccccccccccaa                         \n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
                         "                                                  \n" +
                         "                                                  \n" +
@@ -74,17 +79,61 @@ public class GameManager : MonoBehaviour
                         "                                                  \n" +
                         "                                                  \n" +
                         "                                                  \n";
-                        
-        
-       /* infoMapa =      "5 5  \n" +
-                        "aaaaa\n" +
-                        "aaaaa\n" +
-                        "aaccc\n" +
-                        "aacvc\n" +
-                        "aacvc\n";
-                       */
+        }
+
+        else if (instance.level == 2)
+        {
+            instance.infoMapa = "25 25                    \n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
+                        "aacccccccccccccccccccccaa\n" +
+                        "aaccccccchhhhhhhcccccccaa\n" +
+                        "aacvcccccccccccccccccccaa\n" +
+                        "aacvc               cccaa\n" +
+                        "aacvc               cccaa\n" +
+                        "aaccc               cccaa\n" +
+                        "aaccc               cccaa\n" +
+                        "aaccc               cvcaa\n" +
+                        "aaccc               cvcaa\n" +
+                        "aacvc               cvcaa\n" +
+                        "aacvc               cvcaa\n" +
+                        "aacvc               cccaa\n" +
+                        "aacvc               cccaa\n" +
+                        "aaccc             x cccaa\n" +
+                        "aaccc           x   cccaa\n" +
+                        "aaccc          x    cvcaa\n" +
+                        "aaccc               cvcaa\n" +
+                        "aaccc           x   cvcaa\n" +
+                        "aaccc       @       cvcaa\n" +
+                        "aaccccccccccccccccXccccaa\n" +
+                        "aaccchhhhcAcchhhhccccccaa\n" +
+                        "aacccccccccccccccccccccaa\n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
+        }
+
+        /* infoMapa =      "5 5  \n" +
+                         "aaaaa\n" +
+                         "aaaaa\n" +
+                         "aaccc\n" +
+                         "aacvc\n" +
+                         "aacvc\n";
+                        */
 
         InitGame();
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    static public void CallbackInitialization()
+    {
+        //register the callback to be called everytime the scene is loaded
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    //This is called each time a scene is loaded.
+    static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+
+        //instance.InitGame();
     }
 
     void InitGame()

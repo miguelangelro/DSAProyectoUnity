@@ -15,6 +15,7 @@ public class BoardManager : MonoBehaviour
     public GameObject carreteraHorizontal;
     public GameObject player;
     public GameObject contorno;
+    public GameObject plane;
     public GameObject[] cespedTiles;
     public GameObject[] bigben;
     public GameObject[] virus; 
@@ -26,6 +27,7 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder4;
     private Transform boardHolder5;
     private Transform boardHolder6;
+    private Transform boardHolder7;
     //public int numMapa;
 
 
@@ -47,6 +49,7 @@ public class BoardManager : MonoBehaviour
         boardHolder4 = new GameObject("Jugadores").transform;
         boardHolder5 = new GameObject("Virus").transform;
         boardHolder6 = new GameObject("Items").transform;
+        boardHolder7 = new GameObject("Avion").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -104,6 +107,12 @@ public class BoardManager : MonoBehaviour
 
                     case 'a':
                         instance = Instantiate(acera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        break;
+
+                    case 'A':
+                        GameObject avion = Instantiate(plane, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        avion.transform.SetParent(boardHolder7);
                         break;
 
                     case 'x': //Virus
@@ -166,5 +175,20 @@ public class BoardManager : MonoBehaviour
             }
         }
 
+        //HideLevelImage();
+
     }
+
+    //private void ShowImage()
+    //{
+    //backgroundImage.GetComponent<Renderer>().enabled = true;
+
+    //renderBack.enabled = true;
+    //}
+
+    //private void HideLevelImage()
+    //{
+    //backgroundImage.GetComponent<Renderer>().enabled = false;
+    //renderBack.enabled = false;
+    //}
 }
