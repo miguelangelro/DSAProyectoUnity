@@ -13,9 +13,11 @@ public class BoardManager : MonoBehaviour
     public GameObject carreteraHorizontal;
     public GameObject player;
     public GameObject contorno;
+    public GameObject plane;
     public GameObject[] cespedTiles;
     public GameObject[] bigben;
-    public GameObject[] virus; 
+    public GameObject[] virus;
+    public GameObject backgroundImage;
     float xmapa;
     float ymapa;
     private Transform boardHolder;
@@ -23,12 +25,19 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder3;
     private Transform boardHolder4;
     private Transform boardHolder5;
+    private Transform boardHolder6;
     //public int numMapa;
 
-
+   // MeshRenderer renderBack;
 
     public void SetupScene(string conjuntoMapa) //paso el string con el diseño del mapa y info num filasxcolumnas y numero de nivel (se guarda en mapa), ejemplo: 25 25 1
     {
+        //backgroundImage = GameObject.Find("CanvasPlane");
+        //backgroundImage.SetActive(false);
+        //renderBack = backgroundImage.GetComponentInChildren<MeshRenderer>();
+        //levelText = GameObject.Find("Text");
+        //ShowImage();
+
         string[] filas = conjuntoMapa.Split('\n');
         int xtotal = Convert.ToInt32(filas[0].Split(' ')[0]);
         int ytotal = Convert.ToInt32(filas[0].Split(' ')[1]);
@@ -43,6 +52,7 @@ public class BoardManager : MonoBehaviour
         boardHolder3 = new GameObject("BigBen").transform;
         boardHolder4 = new GameObject("Jugadores").transform;
         boardHolder5 = new GameObject("Virus").transform;
+        boardHolder6 = new GameObject("Plane").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -102,6 +112,10 @@ public class BoardManager : MonoBehaviour
                         instance = Instantiate(acera, new Vector2(xmapa, ymapa), Quaternion.identity);
                         break;
 
+                    case 'A':
+                        instance = Instantiate(plane, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        break;
+
                     case 'x': //Virus
                         GameObject covid = Instantiate(virus[0], new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre cesped (ejemplo)
@@ -146,5 +160,20 @@ public class BoardManager : MonoBehaviour
             }
         }
 
+        //HideLevelImage();
+
     }
+
+    //private void ShowImage()
+    //{
+        //backgroundImage.GetComponent<Renderer>().enabled = true;
+        
+        //renderBack.enabled = true;
+    //}
+
+    //private void HideLevelImage()
+    //{
+        //backgroundImage.GetComponent<Renderer>().enabled = false;
+        //renderBack.enabled = false;
+    //}
 }

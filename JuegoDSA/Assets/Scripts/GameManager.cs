@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
+    //public float tiempoEsperaAvion = 2f; //Tiempo que estara la pantalla con el avion.
     public BoardManager boardScript;
     public static GameManager instance = null;
     string infoMapa;
+    //public GameObject backgroundImage;
 
+    private int level = 0;
 
     public void Awake()
     {
@@ -22,8 +26,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
        
         boardScript = GetComponent<BoardManager>();
-
-        infoMapa = "25 25                    \n" +
+        instance.level++;
+        if (instance.level ==1)
+        {
+            instance.infoMapa = "25 25                    \n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
                         "aacccccccccccccccccccccaa\n" +
@@ -44,11 +50,43 @@ public class GameManager : MonoBehaviour
                         "aaccc      bb  x    cvcaa\n" +
                         "aaccc      bb       cvcaa\n" +
                         "aaccc           x   cvcaa\n" +
-                        "aaccc       @       cvcaa\n" +
+                        "aaccc  A   @       cvcaa\n" +
                         "aaccccccccccccccccXccccaa\n" +
                         "aaccchhhhcccchhhhccccccaa\n" +
                         "aacccccccccccccccccccccaa\n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
+        }
+
+        else if(instance.level == 2)
+        {
+            instance.infoMapa = "25 25                    \n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
+                        "aacccccccccccccccccccccaa\n" +
+                        "aaccccccchhhhhhhcccccccaa\n" +
+                        "aacvcccccccccccccccccccaa\n" +
+                        "aacvc               cccaa\n" +
+                        "aacvc               cccaa\n" +
+                        "aaccc               cccaa\n" +
+                        "aaccc               cccaa\n" +
+                        "aaccc               cvcaa\n" +
+                        "aaccc               cvcaa\n" +
+                        "aacvc               cvcaa\n" +
+                        "aacvc               cvcaa\n" +
+                        "aacvc               cccaa\n" +
+                        "aacvc               cccaa\n" +
+                        "aaccc             x cccaa\n" +
+                        "aaccc           x   cccaa\n" +
+                        "aaccc          x    cvcaa\n" +
+                        "aaccc               cvcaa\n" +
+                        "aaccc           x   cvcaa\n" +
+                        "aaccc  A    @       cvcaa\n" +
+                        "aaccccccccccccccccXccccaa\n" +
+                        "aaccchhhhcccchhhhccccccaa\n" +
+                        "aacccccccccccccccccccccaa\n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
+        }
+        
         
        /* infoMapa =      "5 5  \n" +
                         "aaaaa\n" +
@@ -61,9 +99,23 @@ public class GameManager : MonoBehaviour
         InitGame();
     }
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    static public void CallbackInitialization()
+    {
+        //register the callback to be called everytime the scene is loaded
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    //This is called each time a scene is loaded.
+    static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        
+        //instance.InitGame();
+    }
+
     void InitGame()
     {
-        boardScript.SetupScene(infoMapa);
+        boardScript.SetupScene(instance.infoMapa);
 
     }
 
