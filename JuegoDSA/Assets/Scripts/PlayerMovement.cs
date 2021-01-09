@@ -122,7 +122,9 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D hit;
         Vector2 start = transform.position;
-        Vector2 end = start + new Vector2(xDir, yDir);
+        Vector2 dir = new Vector2(xDir, yDir).normalized; // que tenga siempre magnitud 1
+        dir = dir * 0.5f; // lo escalo
+        Vector2 end = start + dir;
 
         boxCollider.enabled = false;
         hit = Physics2D.Linecast(start, end, blockingLayer);
@@ -133,7 +135,11 @@ public class PlayerMovement : MonoBehaviour
         if (hit.transform == null)
         {
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-           
+
+        }else
+        {
+            Debug.DrawLine(start, end);
+            Debug.Log("COLISION");
         }
 
 
