@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public BoardManager boardScript;
     public static GameManager instance = null;
     string infoMapa;
-    
+    public GameObject CanvasImagePlane;
+    public GameObject gameOver;
+
     private int level = 0;
     public void Awake()
     {
@@ -25,10 +27,14 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
        
         boardScript = GetComponent<BoardManager>();
+        CanvasImagePlane = GameObject.Find("CanvasImagePlane");
+        CanvasImagePlane.SetActive(false);
+        gameOver = GameObject.Find("GameOver");
+        gameOver.SetActive(false);
         instance.level++;
         if (instance.level == 1)
         {
-            infoMapa = "50 50                    \n" +
+            instance.infoMapa = "50 50                    \n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
                         "aacccccccccccccccccccccaa                         \n" +
@@ -111,15 +117,20 @@ public class GameManager : MonoBehaviour
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
         }
 
-        /* infoMapa =      "5 5  \n" +
-                         "aaaaa\n" +
-                         "aaaaa\n" +
-                         "aaccc\n" +
-                         "aacvc\n" +
-                         "aacvc\n";
-                        */
+        else if (instance.level == 2)
+        {
 
-        InitGame();
+        }
+
+            /* infoMapa =      "5 5  \n" +
+                             "aaaaa\n" +
+                             "aaaaa\n" +
+                             "aaccc\n" +
+                             "aacvc\n" +
+                             "aacvc\n";
+                            */
+
+            instance.InitGame();
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -132,8 +143,7 @@ public class GameManager : MonoBehaviour
     //This is called each time a scene is loaded.
     static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
-
-        //instance.InitGame();
+        instance.Awake();
     }
 
     void InitGame()

@@ -23,13 +23,11 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;      //The BoxCollider2D component attached to this object.
     public LayerMask blockingLayer;//Layer on which collision will be checked.
     public Animator transition;
-    public float transitionTime = 1f;
-    public float tiempoEsperaAvion = 1f; //Tiempo que estara la pantalla con el avion.
-
+    public float transitionTime = 3f;
+    public float tiempoEsperaAvion = 5f; //Tiempo que estara la pantalla con el avion.
     public AudioClip playerDañado;
     public AudioClip muerte;
-
-
+    public GameObject Canvas;
 
     void Start()
     {
@@ -64,8 +62,9 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Has muerto, falta poner una animacion de morision kisde");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
-
-
+        GameManager.instance.gameOver.SetActive(true);
+        Canvas = GameObject.Find("Canvas");
+        Canvas.SetActive(false);
     }
 
 
@@ -93,9 +92,11 @@ public class PlayerMovement : MonoBehaviour
         //Check if the tag of the trigger collided with is Exit.
         if (other.tag == "Plane")
         {
+            GameManager.instance.CanvasImagePlane.SetActive(true);
+            new WaitForSeconds(tiempoEsperaAvion);
             LoadLevel();
             Invoke("Restart", restartLevelDelay);
-
+            enabled = false;
         }
     }
 
