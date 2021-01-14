@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     float posy;
 
     public int maxHealth = 100; //vida maxima del player
-    public int currentHealth;
+    public int currentHealth = 100;
     public float restartLevelDelay = 1f;
 
     private BoxCollider2D boxCollider;      //The BoxCollider2D component attached to this object.
@@ -32,19 +32,29 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+
+        if(GameManager.instance.firstLoad)
+        {
+            currentHealth = maxHealth;
+            GameManager.instance.firstLoad = false;
+        } else
+        {
+            currentHealth = GameManager.instance.currentHealth;
+        }
         
-        currentHealth = maxHealth;
         //healthBar.SetMaxHealth(maxHealth);
         transform.position = new Vector2(this.posx, this.posy);//para iniciar en la posicion que queramos
     }
-
-   
-
+    public void SavePlayer()
+    {
+        GameManager.instance.currentHealth = currentHealth;
+    }
     public void TakeDamage(int damage)
     {
         SoundManager.instance.PlaySingle(playerDañado);
         SoundManager.instance.PlaySingle(playerDañado);
         currentHealth -= damage;
+        setCurrentHealth(currentHealth);
 
         //healthBar.SetHealth(currentHealth);
 
@@ -84,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
 
             Move(movement.x, movement.y);
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -93,10 +102,11 @@ public class PlayerMovement : MonoBehaviour
         if (other.tag == "Plane")
         {
             GameManager.instance.CanvasImagePlane.SetActive(true);
+            GameManager.instance.currentHealth = currentHealth;
             new WaitForSeconds(tiempoEsperaAvion);
             LoadLevel();
             Invoke("Restart", restartLevelDelay);
-            enabled = false;
+            //enabled = false;
         }
     }
 
@@ -156,5 +166,15 @@ public class PlayerMovement : MonoBehaviour
     public float getPosY()
     {
         return this.posy;
+    }
+
+    public void setCurrentHealth(int currentHealth)
+    {
+        this.currentHealth = currentHealth;
+    }
+
+    public float getCurrentHealth()
+    {
+        return this.currentHealth;
     }
 }

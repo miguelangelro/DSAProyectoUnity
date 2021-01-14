@@ -13,14 +13,14 @@ public class ScoreManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        
+        text.text = "x" + GameManager.instance.score.ToString();
     }
 
     // Update is called once per frame
     public void ChangeScore(int coinValue)
     {
-        score += coinValue;
-        text.text = "x" + score.ToString();
+        GameManager.instance.score += coinValue;
+        text.text = "x" + GameManager.instance.score.ToString();
 
     }
 }

@@ -14,8 +14,12 @@ public class GameManager : MonoBehaviour
     string infoMapa;
     public GameObject CanvasImagePlane;
     public GameObject gameOver;
+    public int currentHealth = 100;
+    public int maxHealth = 100;
+    public int score = 0;
 
-    private int level = 0;
+    public int level = 0;
+    public Boolean firstLoad = true;
     public void Awake()
     {
         if (instance == null)
@@ -25,7 +29,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
-       
+
+        PlayerMovement.DontDestroyOnLoad(gameObject);
+
         boardScript = GetComponent<BoardManager>();
         CanvasImagePlane = GameObject.Find("CanvasImagePlane");
         CanvasImagePlane.SetActive(false);

@@ -175,20 +175,6 @@ public class BoardManager : MonoBehaviour
             }
         }
 
-        //HideLevelImage();
-
     }
 
-    //private void ShowImage()
-    //{
-    //backgroundImage.GetComponent<Renderer>().enabled = true;
-
-    //renderBack.enabled = true;
-    //}
-
-    //private void HideLevelImage()
-    //{
-    //backgroundImage.GetComponent<Renderer>().enabled = false;
-    //renderBack.enabled = false;
-    //}
 }
