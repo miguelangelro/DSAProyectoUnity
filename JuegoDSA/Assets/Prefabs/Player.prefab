@@ -124,11 +124,17 @@ MonoBehaviour:
   animator: {fileID: 8455907355058010405}
   maxHealth: 100
   currentHealth: 0
+  restartLevelDelay: 1
   blockingLayer:
     serializedVersion: 2
     m_Bits: 256
+  transition: {fileID: 0}
+  transitionTime: 3
+  tiempoEsperaAvion: 5
   "playerDa\xF1ado": {fileID: 8300000, guid: ce37832042819684b98658c38caee287, type: 3}
   muerte: {fileID: 8300000, guid: 060e0e33edba54140abff42165f9fa37, type: 3}
+  Canvas: {fileID: 0}
+  winner: {fileID: 5651956004823685614, guid: bc986aa523b117d41b9582d618d7122e, type: 3}
 --- !u!95 &8455907355058010405
 Animator:
   serializedVersion: 3

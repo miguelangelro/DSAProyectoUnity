@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     string infoMapa;
     public GameObject CanvasImagePlane;
     public GameObject gameOver;
+    public GameObject winner;
+    public Text winnerText;
     public int currentHealth = 100;
     public int maxHealth = 100;
     public int score = 0;
@@ -37,6 +39,9 @@ public class GameManager : MonoBehaviour
         CanvasImagePlane.SetActive(false);
         gameOver = GameObject.Find("GameOver");
         gameOver.SetActive(false);
+        winner = GameObject.Find("CanvasWIN");
+        winnerText = GameObject.Find("txtScore").GetComponent<Text>();
+        winner.SetActive(false);
         instance.level++;
         if (instance.level == 1)
         {
@@ -108,7 +113,7 @@ public class GameManager : MonoBehaviour
                         "aaccc               cvcaa\n" +
                         "aaccc               cvcaa\n" +
                         "aacvc               cvcaa\n" +
-                        "aacvc               cvcaa\n" +
+                        "aacvc       F       cvcaa\n" +
                         "aacvc               cccaa\n" +
                         "aacvc               cccaa\n" +
                         "aaccc             x cccaa\n" +
@@ -122,10 +127,11 @@ public class GameManager : MonoBehaviour
                         "aacccccccccccccccccccccaa\n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
         }
-
-        else if (instance.level == 2)
+        else if(instance.level >2)
         {
-
+            instance.winnerText.text = "Score: " + instance.score;
+            instance.winnerText.fontSize = 45;
+            winner.SetActive(true);
         }
 
             /* infoMapa =      "5 5  \n" +

@@ -58,6 +58,7 @@ MonoBehaviour:
   contorno: {fileID: 4582615976480553040, guid: f956792d8d4734a468f28207910cbe93,
     type: 3}
   plane: {fileID: 3817472879594243705, guid: 24dd528deb163a140b7fd9b311a523b1, type: 3}
+  USAFlag: {fileID: 4960715953097604878, guid: 27e4633f66fc85d408814a5bf772ac9d, type: 3}
   cespedTiles:
   - {fileID: 9203756896270672891, guid: ae7811b92f2d0431e8489346e80937e3, type: 3}
   - {fileID: 5948556430029837693, guid: 1e0e328d91c7645179c52cc8322ea3df, type: 3}
@@ -104,3 +105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardScript: {fileID: 0}
+  CanvasImagePlane: {fileID: 0}
+  gameOver: {fileID: 0}
+  currentHealth: 100
+  maxHealth: 100
+  score: 0
+  level: 0
+  firstLoad: 1

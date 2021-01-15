@@ -8,6 +8,8 @@ TagManager:
   - bigben
   - Virus
   - Coin
+  - Plane
+  - USAFlag
   layers:
   - Default
   - TransparentFX

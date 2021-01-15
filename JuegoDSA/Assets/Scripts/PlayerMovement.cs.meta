@@ -3,7 +3,14 @@ guid: 566aeb225a1c646158623efb7b3b4def
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - animator: {fileID: 8455907355058010405, guid: dad4fdd4b4f354ac6820955eff768345,
+      type: 3}
+  - transition: {instanceID: 0}
+  - "playerDa\xF1ado": {instanceID: 0}
+  - muerte: {instanceID: 0}
+  - Canvas: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

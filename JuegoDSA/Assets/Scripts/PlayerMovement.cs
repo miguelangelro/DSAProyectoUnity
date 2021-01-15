@@ -45,10 +45,7 @@ public class PlayerMovement : MonoBehaviour
         //healthBar.SetMaxHealth(maxHealth);
         transform.position = new Vector2(this.posx, this.posy);//para iniciar en la posicion que queramos
     }
-    public void SavePlayer()
-    {
-        GameManager.instance.currentHealth = currentHealth;
-    }
+
     public void TakeDamage(int damage)
     {
         SoundManager.instance.PlaySingle(playerDañado);
@@ -101,12 +98,21 @@ public class PlayerMovement : MonoBehaviour
         //Check if the tag of the trigger collided with is Exit.
         if (other.tag == "Plane")
         {
-            GameManager.instance.CanvasImagePlane.SetActive(true);
-            GameManager.instance.currentHealth = currentHealth;
-            new WaitForSeconds(tiempoEsperaAvion);
-            LoadLevel();
-            Invoke("Restart", restartLevelDelay);
-            //enabled = false;
+            if(GameManager.instance.level ==2)
+            {
+                LoadLevel();
+                Invoke("Restart", restartLevelDelay);
+            }
+            else
+            {
+                GameManager.instance.CanvasImagePlane.SetActive(true);
+                GameManager.instance.currentHealth = currentHealth;
+                new WaitForSeconds(tiempoEsperaAvion);
+                LoadLevel();
+                Invoke("Restart", restartLevelDelay);
+                //enabled = false;
+            }
+
         }
     }
 
