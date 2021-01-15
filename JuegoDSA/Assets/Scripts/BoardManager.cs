@@ -17,6 +17,7 @@ public class BoardManager : MonoBehaviour
     public GameObject contorno;
     public GameObject plane;
     public GameObject USAFlag;
+    public GameObject whiteHouse;
     public GameObject[] cespedTiles;
     public GameObject[] bigben;
     public GameObject[] virus; 
@@ -121,6 +122,12 @@ public class BoardManager : MonoBehaviour
                         GameObject USAflag = Instantiate(USAFlag, new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
                         USAflag.transform.SetParent(boardHolder8);
+                        break;
+
+                    case 'W':
+                        GameObject casaBlanca  = Instantiate(whiteHouse, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        casaBlanca.transform.SetParent(boardHolder6);
                         break;
 
                     case 'x': //Virus
