@@ -117,8 +117,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.tag == "ciudadano")
         {
+            MovimientoAleatorio.instance.StopMoving();
             DialogManager.instance.animatorDialog.SetBool("HelpOpened", true);
-
         }
     }
 

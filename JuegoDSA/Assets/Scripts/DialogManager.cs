@@ -80,6 +80,7 @@ public class DialogManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("isOpened", false);
+        MovimientoAleatorio.instance.StartMoving();
     }
 
 }
