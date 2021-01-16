@@ -11,6 +11,7 @@ TagManager:
   - Plane
   - USAFlag
   - WhiteHouse
+  - ciudadano
   layers:
   - Default
   - TransparentFX

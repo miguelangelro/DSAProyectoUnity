@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip muerte;
     public GameObject Canvas;
 
+    public Animator animatorDialog;
+
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -112,6 +114,10 @@ public class PlayerMovement : MonoBehaviour
                 Invoke("Restart", restartLevelDelay);
                 //enabled = false;
             }
+        }
+        else if (other.tag == "ciudadano")
+        {
+            DialogManager.instance.animatorDialog.SetBool("HelpOpened", true);
 
         }
     }

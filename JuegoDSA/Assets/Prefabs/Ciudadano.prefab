@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7952365642782121651}
   - component: {fileID: 31111218972798821}
   - component: {fileID: 1428546752617213980}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Ciudadano
-  m_TagString: Untagged
+  m_TagString: ciudadano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,8 +89,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2109582655
-  m_SortingLayer: 3
+  m_SortingLayerID: -665734969
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6470460504253458178, guid: 66440ada98e1348cba90d5ef9b5e4f2a,
     type: 3}
@@ -114,7 +114,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
