@@ -77,7 +77,7 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         animator.SetBool("isOpened", false);
         MovimientoAleatorio.instance.StartMoving();
