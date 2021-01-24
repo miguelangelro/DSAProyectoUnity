@@ -167,7 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 2165279768010332405, guid: d295ae271c9a4a649be5c712f6b81a95,
+    type: 3}
   isInvulnerable: 0
 --- !u!114 &6009879602112702511
 MonoBehaviour:

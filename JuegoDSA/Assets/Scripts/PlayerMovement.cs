@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
             Move(movement.x, movement.y);
         }
 
-        if (GameManager.instance.level < 3)
+        if (MovimientoAleatorio.instance != null)
         {
             if (Vector2.Distance(transform.position, MovimientoAleatorio.instance.transform.position) < 0.5f)
             {

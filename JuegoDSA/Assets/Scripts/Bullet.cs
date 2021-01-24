@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
 
 	public float speed = 20f;
-	public int damage = 40;
+	public int damage = 15;
 	public Rigidbody2D rb;
 	//public GameObject impactEffect;
 
@@ -16,6 +16,20 @@ public class Bullet : MonoBehaviour
 		rb.velocity = transform.right * speed;
 	}
 
+	void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+		BossHealth boss = hitInfo.GetComponent<BossHealth>();
 
+		if (hitInfo.gameObject.CompareTag("Virus"))
+		{
+			if (boss != null)
+			{
+
+				boss.TakeDamage(damage);
+			}
+			Destroy(gameObject);
+		}
+
+    }
 
 }
