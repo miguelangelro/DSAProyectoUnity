@@ -127,7 +127,19 @@ public class GameManager : MonoBehaviour
                         "aacccccccccccccccccccccaa\n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
         }
-        else if(instance.level > 2)
+        else if (instance.level == 3)
+        {
+            instance.infoMapa = "25 7                    \n" +
+
+                        "                         \n" +
+                        "                         \n" +
+                        "                         \n" +
+                        "                         \n" +
+                        "                         \n" +
+                        "    @          !         \n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
+        }
+        else if(instance.level > 3)
         {
             instance.winnerText.text = "Score: " + instance.score;
             instance.winnerText.fontSize = 45;

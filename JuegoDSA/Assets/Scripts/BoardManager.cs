@@ -146,6 +146,14 @@ public class BoardManager : MonoBehaviour
                         cepa.transform.SetParent(boardHolder5);
                         break;
 
+                    case '!': //Virus3
+                        GameObject boss = Instantiate(virus[2], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        BossVirus final = boss.GetComponent<BossVirus>();
+                        final.SetPosition(xmapa, ymapa);
+                        boss.transform.SetParent(boardHolder5);
+                        break;
+
                     case 'b':
                         GameObject ben = Instantiate(bigben[i], new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
