@@ -66,11 +66,15 @@ public class PlayerMovement : MonoBehaviour
 
         //healthBar.SetHealth(currentHealth);
 
+        StartCoroutine(DamageAnimation());
+
         if (currentHealth <= 0)
         {
             Die();
         }
     }
+
+    
 
 
     void Die()
@@ -85,6 +89,32 @@ public class PlayerMovement : MonoBehaviour
         Canvas.SetActive(false);
     }
 
+
+    IEnumerator DamageAnimation()
+    {
+        SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
+
+        for (int i = 0; i < 3; i++)
+        {
+            foreach (SpriteRenderer sr in srs)
+            {
+                Color c = sr.color;
+                c.a = 0;
+                sr.color = c;
+            }
+
+            yield return new WaitForSeconds(.1f);
+
+            foreach (SpriteRenderer sr in srs)
+            {
+                Color c = sr.color;
+                c.a = 1;
+                sr.color = c;
+            }
+
+            yield return new WaitForSeconds(.1f);
+        }
+    }
 
     // Update is called once per frame
     void Update()
