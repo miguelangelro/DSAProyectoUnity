@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     float posx;
     float posy;
+    public Joystick joystick;
 
     public int maxHealth = 100; //vida maxima del player
     public int currentHealth = 100;
@@ -32,13 +33,16 @@ public class PlayerMovement : MonoBehaviour
     public Animator animatorDialog;
 
     public GameObject ciudadano;
+    public PlayerMovement jugador;
 
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
         ciudadano = GameObject.Find("Ciudadano");
-
-        if(GameManager.instance.firstLoad)
+        jugador = GameObject.Find("Player(Clone)").GetComponent<PlayerMovement>();
+        jugador.setJoystick(GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>());
+        
+        if (GameManager.instance.firstLoad)
         {
             currentHealth = maxHealth;
             GameManager.instance.firstLoad = false;
@@ -84,9 +88,21 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        movement.x = Input.GetAxisRaw("Horizontal");
+        #if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
 
-        movement.y= Input.GetAxisRaw("Vertical");
+                movement.x = Input.GetAxisRaw("Horizontal");
+
+                movement.y= Input.GetAxisRaw("Vertical");
+
+        #elif UNITY_ANDROID
+                movement.x = joystick.Horizontal;
+
+                movement.y = joystick.Vertical;
+
+        #endif 
+
+        
+
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
@@ -198,6 +214,11 @@ public class PlayerMovement : MonoBehaviour
     public void setCurrentHealth(int currentHealth)
     {
         this.currentHealth = currentHealth;
+    }
+
+    public void setJoystick(Joystick controller)
+    {
+        this.joystick = controller;
     }
 
     public float getCurrentHealth()

@@ -122,6 +122,8 @@ MonoBehaviour:
   moveSpeed: 2.5
   rb: {fileID: 8455907355058010404}
   animator: {fileID: 8455907355058010405}
+  joystick: {fileID: 5139095813599122843, guid: 726d529cc052e41bdb7236d0750dc8be,
+    type: 3}
   maxHealth: 100
   currentHealth: 0
   restartLevelDelay: 1
@@ -135,6 +137,7 @@ MonoBehaviour:
   muerte: {fileID: 8300000, guid: 060e0e33edba54140abff42165f9fa37, type: 3}
   Canvas: {fileID: 0}
   animatorDialog: {fileID: 0}
+  ciudadano: {fileID: 0}
 --- !u!95 &8455907355058010405
 Animator:
   serializedVersion: 3
