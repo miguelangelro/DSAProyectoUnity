@@ -138,6 +138,7 @@ MonoBehaviour:
   Canvas: {fileID: 0}
   animatorDialog: {fileID: 0}
   ciudadano: {fileID: 0}
+  jugador: {fileID: 0}
 --- !u!95 &8455907355058010405
 Animator:
   serializedVersion: 3

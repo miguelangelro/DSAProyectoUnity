@@ -106,10 +106,10 @@ public class GameManager : MonoBehaviour
                         "aacccccccccccccccccccccaa\n" +
                         "aaccccccchhhhhhhcccccccaa\n" +
                         "aacvcccccccccccccccccccaa\n" +
+                        "aacvc   g           cccaa\n" +
                         "aacvc               cccaa\n" +
-                        "aacvc               cccaa\n" +
-                        "aaccc               cccaa\n" +
-                        "aaccc               cccaa\n" +
+                        "aaccc  p            cccaa\n" +
+                        "aaccc            g  cccaa\n" +
                         "aaccc               cvcaa\n" +
                         "aaccc               cvcaa\n" +
                         "aacvc               cvcaa\n" +
@@ -118,10 +118,10 @@ public class GameManager : MonoBehaviour
                         "aacvc               cccaa\n" +
                         "aaccc             x cccaa\n" +
                         "aaccc           x   cccaa\n" +
-                        "aaccc          x    cvcaa\n" +
+                        "aacccgg        x    cvcaa\n" +
                         "aaccc               cvcaa\n" +
                         "aaccc           x   cvcaa\n" +
-                        "aaccc       @       cvcaa\n" +
+                        "aaccc  g    @       cvcaa\n" +
                         "aaccccccccccccccccXccccaa\n" +
                         "aaccchhhhcAcchhhhccccccaa\n" +
                         "aacccccccccccccccccccccaa\n" +

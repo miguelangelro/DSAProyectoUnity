@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject ciudadano;
     public PlayerMovement jugador;
 
+    public Dialogue dialog;
+
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -113,12 +115,12 @@ public class PlayerMovement : MonoBehaviour
             Move(movement.x, movement.y);
         }
 
-        if (Vector2.Distance(transform.position, MovimientoAleatorio.instance.transform.position) < 0.2f)
+        if (Vector2.Distance(transform.position, MovimientoAleatorio.instance.transform.position) < 0.5f)
         {
             MovimientoAleatorio.instance.StopMoving();
             DialogManager.instance.animatorDialog.SetBool("HelpOpened", true);
         }
-        else
+        else if(DialogManager.instance.animatorDialog != null)
         {
             MovimientoAleatorio.instance.StartMoving();
             DialogManager.instance.animatorDialog.SetBool("HelpOpened", false);

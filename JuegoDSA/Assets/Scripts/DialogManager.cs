@@ -25,7 +25,7 @@ public class DialogManager : MonoBehaviour
             instance = this;
 
         else if (instance != this)
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
     }
