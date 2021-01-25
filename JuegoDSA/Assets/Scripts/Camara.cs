@@ -13,7 +13,6 @@ public class Camara : MonoBehaviour
     
     public Vector2 maxPosition;
     public Vector2 minPosition;
-    public static GameManager instance = null;
 
 
     void Start()
@@ -44,7 +43,7 @@ public class Camara : MonoBehaviour
 
         }
 
-        if (instance.level == 3)
+        if (GameManager.instance.level == 3)
         {
             minPosition.x = 7.4f;
             maxPosition.x = 16.7f;
