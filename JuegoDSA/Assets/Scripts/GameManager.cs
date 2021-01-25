@@ -170,23 +170,9 @@ public class GameManager : MonoBehaviour
         instance.Awake();
     }
 
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-    static public void CallbackInitialization()
-    {
-        //register the callback to be called everytime the scene is loaded
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    //This is called each time a scene is loaded.
-    static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
-    {
-        
-        //instance.InitGame();
-    }
-
     void InitGame()
     {
-        boardScript.SetupScene(instance.infoMapa);
+        boardScript.SetupScene(infoMapa);
 
     }
 
