@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            Debug.Log("pasa por aqui");
             Die();
         }
     }

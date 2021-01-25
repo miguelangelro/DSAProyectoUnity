@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour
+[CreateAssetMenu(menuName = "Player", fileName = "PlayerData")]
+public class PlayerData : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //ESTA ES LA CLASE QUE COGERA LOS DATOS PARA PASARLOS AL UI DEL RANKING
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string playerName;
+    public Sprite playerSprite;
+
+    public int playerScore;
+    public int playerHealth;
+
 }

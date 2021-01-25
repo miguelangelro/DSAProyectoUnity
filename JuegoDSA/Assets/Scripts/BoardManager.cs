@@ -22,6 +22,8 @@ public class BoardManager : MonoBehaviour
     public GameObject[] bigben;
     public GameObject[] virus;
     public GameObject backgroundImage;
+    public GameObject obras;
+    public GameObject señalObras;
     float xmapa;
     float ymapa;
     private Transform boardHolder;
@@ -32,9 +34,11 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder6;
     private Transform boardHolder7;
     private Transform boardHolder8;
+    private Transform boardHolder9;
+    private Transform boardHolder10;
     //public int numMapa;
 
-   // MeshRenderer renderBack;
+    // MeshRenderer renderBack;
 
     public void SetupScene(string conjuntoMapa) //paso el string con el diseño del mapa y info num filasxcolumnas y numero de nivel (se guarda en mapa), ejemplo: 25 25 1
     {
@@ -61,6 +65,8 @@ public class BoardManager : MonoBehaviour
         boardHolder6 = new GameObject("Items").transform;
         boardHolder7 = new GameObject("Avion").transform;
         boardHolder8 = new GameObject("USAFlag").transform;
+        boardHolder9 = new GameObject("obras").transform;
+        boardHolder10 = new GameObject("señalObras").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -141,6 +147,21 @@ public class BoardManager : MonoBehaviour
                         GameObject casaBlanca  = Instantiate(whiteHouse, new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
                         casaBlanca.transform.SetParent(boardHolder6);
+                        break;
+                    case 's':
+                        GameObject obrasLine = Instantiate(obras, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        obrasLine.transform.SetParent(boardHolder9);
+                        break;
+                    case 'S':
+                        GameObject obrasSenal = Instantiate(señalObras, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        obrasSenal.transform.SetParent(boardHolder6);
+                        break;
+                    case 'R':
+                        GameObject obrasSenalC = Instantiate(señalObras, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        obrasSenalC.transform.SetParent(boardHolder6);
                         break;
 
                     case 'x': //Virus
