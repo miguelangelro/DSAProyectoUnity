@@ -57,6 +57,10 @@ MonoBehaviour:
   player: {fileID: 8455907355058010400, guid: dad4fdd4b4f354ac6820955eff768345, type: 3}
   contorno: {fileID: 4582615976480553040, guid: f956792d8d4734a468f28207910cbe93,
     type: 3}
+  plane: {fileID: 3817472879594243705, guid: 24dd528deb163a140b7fd9b311a523b1, type: 3}
+  USAFlag: {fileID: 4960715953097604878, guid: 27e4633f66fc85d408814a5bf772ac9d, type: 3}
+  whiteHouse: {fileID: 4323484490827645579, guid: c3ba1798d6be941509f18f23703d7fb5,
+    type: 3}
   cespedTiles:
   - {fileID: 9203756896270672891, guid: ae7811b92f2d0431e8489346e80937e3, type: 3}
   - {fileID: 5948556430029837693, guid: 1e0e328d91c7645179c52cc8322ea3df, type: 3}
@@ -90,6 +94,7 @@ MonoBehaviour:
   virus:
   - {fileID: 1898741779791224627, guid: dd328b8fb7251864b927afb99deb863a, type: 3}
   - {fileID: 6106427356569002996, guid: 7cce9734494aa704c9aae1d176c16c22, type: 3}
+  - {fileID: 2730718185367459385, guid: 0814724615e1dbf4caccc2ac341f09f8, type: 3}
 --- !u!114 &2832602142263697641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,3 +108,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardScript: {fileID: 0}
+  CanvasImagePlane: {fileID: 0}
+  gameOver: {fileID: 0}
+  winner: {fileID: 0}
+  winnerText: {fileID: 0}
+  currentHealth: 100
+  maxHealth: 100
+  score: 0
+  level: 0
+  firstLoad: 1

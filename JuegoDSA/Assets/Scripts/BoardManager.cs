@@ -15,9 +15,13 @@ public class BoardManager : MonoBehaviour
     public GameObject carreteraHorizontal;
     public GameObject player;
     public GameObject contorno;
+    public GameObject plane;
+    public GameObject USAFlag;
+    public GameObject whiteHouse;
     public GameObject[] cespedTiles;
     public GameObject[] bigben;
-    public GameObject[] virus; 
+    public GameObject[] virus;
+    public GameObject backgroundImage;
     float xmapa;
     float ymapa;
     private Transform boardHolder;
@@ -26,12 +30,20 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder4;
     private Transform boardHolder5;
     private Transform boardHolder6;
+    private Transform boardHolder7;
+    private Transform boardHolder8;
     //public int numMapa;
 
-
+   // MeshRenderer renderBack;
 
     public void SetupScene(string conjuntoMapa) //paso el string con el diseño del mapa y info num filasxcolumnas y numero de nivel (se guarda en mapa), ejemplo: 25 25 1
     {
+        //backgroundImage = GameObject.Find("CanvasPlane");
+        //backgroundImage.SetActive(false);
+        //renderBack = backgroundImage.GetComponentInChildren<MeshRenderer>();
+        //levelText = GameObject.Find("Text");
+        //ShowImage();
+
         string[] filas = conjuntoMapa.Split('\n');
         int xtotal = Convert.ToInt32(filas[0].Split(' ')[0]);
         int ytotal = Convert.ToInt32(filas[0].Split(' ')[1]);
@@ -47,6 +59,8 @@ public class BoardManager : MonoBehaviour
         boardHolder4 = new GameObject("Jugadores").transform;
         boardHolder5 = new GameObject("Virus").transform;
         boardHolder6 = new GameObject("Items").transform;
+        boardHolder7 = new GameObject("Avion").transform;
+        boardHolder8 = new GameObject("USAFlag").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -106,6 +120,29 @@ public class BoardManager : MonoBehaviour
                         instance = Instantiate(acera, new Vector2(xmapa, ymapa), Quaternion.identity);
                         break;
 
+                    case 'A':
+                        GameObject avion = Instantiate(plane, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        avion.transform.SetParent(boardHolder7);
+                        break;
+
+                    case 'H':
+                        GameObject arbol = Instantiate(contorno, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        arbol.transform.SetParent(boardHolder2);
+                        break;
+                    case 'F':
+                        GameObject USAflag = Instantiate(USAFlag, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        USAflag.transform.SetParent(boardHolder8);
+                        break;
+
+                    case 'W':
+                        GameObject casaBlanca  = Instantiate(whiteHouse, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        casaBlanca.transform.SetParent(boardHolder6);
+                        break;
+
                     case 'x': //Virus
                         GameObject covid = Instantiate(virus[0], new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre cesped (ejemplo)
@@ -116,10 +153,18 @@ public class BoardManager : MonoBehaviour
 
                     case 'X': //Virus2
                         GameObject cepa = Instantiate(virus[1], new Vector2(xmapa, ymapa), Quaternion.identity);
-                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre la carretera (ejemplo)
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre la carretera (ejemplo)
                         VirusController vi = cepa.GetComponent<VirusController>();
                         vi.SetPosition(xmapa,ymapa);
                         cepa.transform.SetParent(boardHolder5);
+                        break;
+
+                    case '!': //Virus3
+                        GameObject boss = Instantiate(virus[2], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        BossVirus final = boss.GetComponent<BossVirus>();
+                        final.SetPosition(xmapa, ymapa);
+                        boss.transform.SetParent(boardHolder5);
                         break;
 
                     case 'b':
@@ -166,5 +211,8 @@ public class BoardManager : MonoBehaviour
             }
         }
 
+        //HideLevelImage();
+
     }
+
 }

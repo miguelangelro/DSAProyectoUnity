@@ -119,10 +119,15 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   restartLevelDelay: 1
-  transition: {fileID: 0}
+  blockingLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  transition: {fileID: 8455907355058010405, guid: dad4fdd4b4f354ac6820955eff768345,
+    type: 3}
   transitionTime: 1
-  CanvasPlane: {fileID: 0}
   tiempoEsperaAvion: 2
+  "playerDa\xF1ado": {fileID: 0}
+  muerte: {fileID: 0}
 --- !u!1 &4802881308906527581
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,8 +346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2316460191460521872, guid: b2f6a80080cefaf479da767a8537b809,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 833cea29cab286749886f30efd18cef0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

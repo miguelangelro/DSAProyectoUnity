@@ -18,6 +18,8 @@ public class MovimientoAleatorio : MonoBehaviour
     float posx;
     float posy;
 
+    public static MovimientoAleatorio instance = null;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,19 @@ public class MovimientoAleatorio : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    public void Awake()
+    {
+        if (instance == null)
+            instance = this;
+
+        else if (instance != this)
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
+
+    }
+
+        // Update is called once per frame
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, speed * Time.deltaTime);
@@ -47,6 +61,16 @@ public class MovimientoAleatorio : MonoBehaviour
 
         }
         
+    }
+
+    public void StopMoving()
+    {
+        speed = 0;
+    }
+
+    public void StartMoving()
+    {
+        instance.speed = 1.5f;
     }
 
     public void SetPosition(float x, float y)

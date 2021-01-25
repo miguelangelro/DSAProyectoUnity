@@ -8,6 +8,10 @@ TagManager:
   - bigben
   - Virus
   - Coin
+  - Plane
+  - USAFlag
+  - WhiteHouse
+  - ciudadano
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - 
   - BlockingLayer
   - Player
-  - 
+  - ciudadano
   - 
   - 
   - 
