@@ -53,27 +53,27 @@ public class GameManager : MonoBehaviour
                         "aacvc  x        x         x         x        cccaa\n" +
                         "aacvc    HHHHH     HHHHH     HHHHH     HHHH  cccaa\n" +
                         "aaccc                                        scsaa\n" +
-                        "aaccc HHHH    HHHHH     HHHHH     HHHHH      cScaa\n" +
+                        "aacccYHHHH    HHHHH     HHHHH     HHHHH      cScaa\n" +
                         "aaccc                                        cvcaa\n" +
                         "aaccc     HHHH     HHHH     HHHH     HHHH    cvcaa\n" +
-                        "aasvs           X        X        X          cvcaa\n" +
+                        "aasvsX          X        X        X          cvcaa\n" +
                         "aacSc       x        x            x          cvcaa\n" +
                         "aacvc                                        cccaa\n" +
                         "aacvc        P         bb                    cccaa\n" +
-                        "aaccc                  bb                   Sscsaa\n" +
+                        "aacccY                 bb                   Sscsaa\n" +
                         "aaccc            X     bb                    cccaa\n" +
                         "aaccc                  bb   H  g X    H      cvcaa\n" +
                         "aascs    X             bb                    cvcaa\n" +
                         "aacSc                  bb                    cccaa\n" +
                         "aacvc                  bb                    cccaa\n" +
-                        "aacvc    H  x  H   g   bb      H  g X    H   cccaa\n" +
+                        "aacvcY   H  x  H   g   bb      H  g X    H   cccaa\n" +
                         "aacvc                  bb                    cccaa\n" +
                         "aacvc   g              bb                   Sscsaa\n" +
                         "aacvc         H  x  H  bb                    cccaa\n" +
-                        "aacvc                  bb   H  g X    H      cccaa\n" +
+                        "aacvcY                 bb   H  g X    H      cccaa\n" +
                         "aacvc                                        cccaa\n" +
                         "aacvc    HHHHHHH               HHHHHHH       cccaa\n" +
-                        "aacvc                  Y                     cccaa\n" +
+                        "aacvcY                 Y                     cccaa\n" +
                         "aacvc        HHHHHHH       HHHHHHH           cccaa\n" +
                         "aaccc                             p          cvcaa\n" +
                         "aaccc  gg              @                 gg  cvcaa\n" +
