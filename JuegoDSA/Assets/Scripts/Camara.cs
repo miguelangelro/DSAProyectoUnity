@@ -13,6 +13,7 @@ public class Camara : MonoBehaviour
     
     public Vector2 maxPosition;
     public Vector2 minPosition;
+    public static GameManager instance = null;
 
 
     void Start()
@@ -40,6 +41,15 @@ public class Camara : MonoBehaviour
 
 
             transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
+
+        }
+
+        if (instance.level == 3)
+        {
+            minPosition.x = 7.4f;
+            maxPosition.x = 16.7f;
+            minPosition.y = 2.6f;
+            maxPosition.y = 2f;
 
         }
 

@@ -30,6 +30,8 @@ public class Bullet : MonoBehaviour
 			Destroy(gameObject);
 		}
 
-    }
+		else if (hitInfo.gameObject.CompareTag("Contorno"))
+			Destroy(gameObject);
+	}
 
 }

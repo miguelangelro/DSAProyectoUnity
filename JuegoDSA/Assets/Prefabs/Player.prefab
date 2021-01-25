@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276726084858698983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.249, y: -0.262, z: 0}
+  m_LocalPosition: {x: 0.258, y: -0.142, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8455907355058010402}
@@ -234,3 +234,4 @@ MonoBehaviour:
   firePoint: {fileID: 976214258578813006}
   bulletPrefab: {fileID: 1539632861300792, guid: 281c1d3ffb998994baeca00f8d631d83,
     type: 3}
+  bulletForce: 20

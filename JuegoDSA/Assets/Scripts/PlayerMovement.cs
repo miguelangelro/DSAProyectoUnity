@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip playerDañado;
     public AudioClip muerte;
     public GameObject Canvas;
+    public bool girado = false;
 
     public Animator animatorDialog;
 
@@ -146,6 +147,11 @@ public class PlayerMovement : MonoBehaviour
             Move(movement.x, movement.y);
         }
 
+ 
+        
+
+        
+
         if (MovimientoAleatorio.instance != null)
         {
             if (Vector2.Distance(transform.position, MovimientoAleatorio.instance.transform.position) < 0.5f)
@@ -222,16 +228,19 @@ public class PlayerMovement : MonoBehaviour
 
         boxCollider.enabled = true;
 
+        
 
-        if (hit.transform == null)
-        {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
-        }else
-        {
-            Debug.DrawLine(start, end);
-            Debug.Log("COLISION");
-        }
+            if (hit.transform == null)
+            {
+                rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+            }
+            else
+            {
+                Debug.DrawLine(start, end);
+                Debug.Log("COLISION");
+            }
 
 
     }
