@@ -125,6 +125,12 @@ public class BoardManager : MonoBehaviour
                         instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
                         avion.transform.SetParent(boardHolder7);
                         break;
+
+                    case 'H':
+                        GameObject arbol = Instantiate(contorno, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        arbol.transform.SetParent(boardHolder2);
+                        break;
                     case 'F':
                         GameObject USAflag = Instantiate(USAFlag, new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
@@ -147,7 +153,7 @@ public class BoardManager : MonoBehaviour
 
                     case 'X': //Virus2
                         GameObject cepa = Instantiate(virus[1], new Vector2(xmapa, ymapa), Quaternion.identity);
-                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre la carretera (ejemplo)
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre la carretera (ejemplo)
                         VirusController vi = cepa.GetComponent<VirusController>();
                         vi.SetPosition(xmapa,ymapa);
                         cepa.transform.SetParent(boardHolder5);

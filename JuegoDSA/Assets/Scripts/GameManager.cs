@@ -45,87 +45,81 @@ public class GameManager : MonoBehaviour
         instance.level++;
         if (instance.level == 1)
         {
-            instance.infoMapa = "50 50                    \n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
-                        "aacccccccccccccccccccccaa                         \n" +
-                        "aaccccccchhhhhhhcccccccaa                         \n" +
-                        "aacvcccccccccccccccccccaa                         \n" +
-                        "aacvc               cccaa                         \n" +
-                        "aacvc               cccaa                         \n" +
-                        "aaccc      bb       cccaa                         \n" +
-                        "aaccc      bb       cccaa                         \n" +
-                        "aaccc      bb       cvcaa                         \n" +
-                        "aaccc      bb       cvcaa                         \n" +
-                        "aacvc      bb       cvcaa                         \n" +
-                        "aacvc      bb       cvcaa                         \n" +
-                        "aacvc      bb       cccaa                         \n" +
-                        "aacvc      bb       cccaa                         \n" +
-                        "aaccc      bb       cccaa                         \n" +
-                        "aaccc  x   bb       cccaa                         \n" +
-                        "aaccc  x   bb       cvcaa                         \n" +
-                        "aaccc      bb       cvcaa                         \n" +
-                        "aaccc           p   cvcaa                         \n" +
-                        "aaccc  gg   @   g   cvcaa                         \n" +
-                        "aacvccccAccccccccccccccaa                         \n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa                         \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                           g                      \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
-                        "                                                  \n" +
+            instance.infoMapa = "50 34                    \n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n" +
+                        "aaccccccccccccccccccccccccccccccccccccccccccccccaa\n" +
+                        "aaccccAcchhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccaa\n" +
+                        "aacvccccccccccccccccccccccccccccccccccccccccccccaa\n" +
+                        "aacvc  x        x         x         x        cccaa\n" +
+                        "aacvc    HHHHH     HHHHH     HHHHH     HHHH  cccaa\n" +
+                        "aaccc                                        cccaa\n" +
+                        "aaccc HHHH    HHHHH     HHHHH     HHHHH      cccaa\n" +
+                        "aaccc                                        cvcaa\n" +
+                        "aaccc     HHHH     HHHH     HHHH     HHHH    cvcaa\n" +
+                        "aacvc           X        X        X          cvcaa\n" +
+                        "aacvc       x        x            x          cvcaa\n" +
+                        "aacvc                                        cccaa\n" +
+                        "aacvc        P         bb                    cccaa\n" +
+                        "aaccc                  bb                    cccaa\n" +
+                        "aaccc            X     bb                    cccaa\n" +
+                        "aaccc                  bb   H  g X    H      cvcaa\n" +
+                        "aaccc     X            bb                    cvcaa\n" +
+                        "aacvc                  bb                    cccaa\n" +
+                        "aacvc                  bb                    cccaa\n" +
+                        "aacvc    H  x  H   g   bb      H  g X    H   cccaa\n" +
+                        "aacvc                  bb                    cccaa\n" +
+                        "aacvc   g              bb                    cccaa\n" +
+                        "aacvc         H  x  H  bb                    cccaa\n" +
+                        "aacvc                  bb   H  g X    H      cccaa\n" +
+                        "aacvc                                        cccaa\n" +
+                        "aacvc    HHHHHHH               HHHHHHH       cccaa\n" +
+                        "aacvc                                        cccaa\n" +
+                        "aacvc        HHHHHHH       HHHHHHH           cccaa\n" +
+                        "aaccc                             p          cvcaa\n" +
+                        "aaccc  gg              @                 gg  cvcaa\n" +
+                        "aacvccccccccccccccccccccccccccccccccccccccccccccaa\n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n" +
                         "                                                  \n";
         }
 
         else if (instance.level == 2)
         {
-            instance.infoMapa = "25 25                    \n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n" +
-                        "aacccccccccccccccccccccaa\n" +
-                        "aaccccccchhhhhhhcccccccaa\n" +
-                        "aacvcccccccccccccccccccaa\n" +
-                        "aacvc   g           cccaa\n" +
-                        "aacvc               cccaa\n" +
-                        "aaccc  p            cccaa\n" +
-                        "aaccc            g  cccaa\n" +
-                        "aaccc               cvcaa\n" +
-                        "aaccc               cvcaa\n" +
-                        "aacvc               cvcaa\n" +
-                        "aacvc       W       cvcaa\n" +
-                        "aacvc               cccaa\n" +
-                        "aacvc               cccaa\n" +
-                        "aaccc             x cccaa\n" +
-                        "aaccc           x   cccaa\n" +
-                        "aacccgg        x    cvcaa\n" +
-                        "aaccc               cvcaa\n" +
-                        "aaccc           x   cvcaa\n" +
-                        "aaccc  g    @       cvcaa\n" +
-                        "aaccccccccccccccccXccccaa\n" +
-                        "aaccchhhhcAcchhhhccccccaa\n" +
-                        "aacccccccccccccccccccccaa\n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
+            instance.infoMapa = "50 34                    \n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n" +
+                        "aaccccccccccccccccccccccccccccccccccccccccccccccaa\n" +
+                        "aaccccAcchhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccaa\n" +
+                        "aacvccccccccccccccccccccccccccccccccccccccccccccaa\n" +
+                        "aacvc   g                                    cccaa\n" +
+                        "aacvc                 x               x      cccaa\n" +
+                        "aaccc   HHHHHHHHHHHH    HHHHHHHHHHHH    HHHH cccaa\n" +
+                        "aaccc                                        cccaa\n" +
+                        "aaccc     X    X    X    X    X    X    X    cvcaa\n" +
+                        "aaccc                                        cvcaa\n" +
+                        "aacvc     x   HHHH   x    HHHH   x    HHHH   cvcaa\n" +
+                        "aacvc                                        cvcaa\n" +
+                        "aacvc    HHHH   X   HHHH   X  HHHH   X       cccaa\n" +
+                        "aaccc                                        cvcaa\n" +
+                        "aaccc                                        cvcaa\n" +
+                        "aaccc     x    x                  X      X   cvcaa\n" +
+                        "aaccc        g                       g       cvcaa\n" +
+                        "aaccc     X    X         W        x      x   cvcaa\n" +
+                        "aaccc        g                        g      cvcaa\n" +
+                        "aaccc     x    x                  X      X   cvcaa\n" +
+                        "aaccc                                        cvcaa\n" +
+                        "aaccc                                        cvcaa\n" +
+                        "aacvc   X   g           p            g    X  cccaa\n" +
+                        "aaccc     HHHH                     HHHHH     cccaa\n" +
+                        "aaccc           HHHH           HHHH          cccaa\n" +
+                        "aaccc     HHHH       HHHHHHHH       HHHH     cvcaa\n" +
+                        "aaccc          HHHH            HHHH          cvcaa\n" +
+                        "aaccc              HHHH   HHHH               cvcaa\n" +
+                        "aaccc                   @                    cvcaa\n" +
+                        "aaccccccccccccccccccccccccccccccccccccccccccccccaa\n" +
+                        "aaccchhhhcccchhhhcccchhhhcccchhhhcccchhhhcccccccaa\n" +
+                        "aacvccccccccccccccccccccccccccccccccccccccccccccaa\n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n" +
+                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n";
         }
         else if (instance.level == 3)
         {
