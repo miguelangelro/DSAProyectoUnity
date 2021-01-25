@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public float tiempoEsperaAvion = 5f; //Tiempo que estara la pantalla con el avion.
     public AudioClip playerDañado;
     public AudioClip muerte;
-    public GameObject Canvas;
+   // public GameObject Canvas;
     public bool girado = false;
 
     public Animator animatorDialog;
@@ -92,8 +92,8 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         GameManager.instance.gameOver.SetActive(true);
-        Canvas = GameObject.Find("Canvas");
-        Canvas.SetActive(false);
+        //Canvas = GameObject.Find("Canvas");
+        //Canvas.SetActive(false);
     }
 
 
