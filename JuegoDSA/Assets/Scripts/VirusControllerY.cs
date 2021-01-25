@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VirusController : MonoBehaviour
+public class VirusControllerY : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -11,7 +11,7 @@ public class VirusController : MonoBehaviour
     private Vector2 startPos;
     float posx;
     float posy;
-    public bool dañado=false;
+    public bool dañado = false;
     public bool vertical = false;
 
     public Animator animator;
@@ -75,13 +75,13 @@ public class VirusController : MonoBehaviour
         transform.position = new Vector2(this.posx, this.posy);//Se inicia en la posicion que ocupa el carácter
         startPos = transform.position;
         player = GameObject.Find("Player(Clone)");
-        
+
     }
 
     void Update()
     {
         Vector2 v = startPos;
-        v.x += delta * Mathf.Sin(Time.time * velocidad); // hace un efecto de movimiento mas fluido con la funcion sin
+        v.y += delta * Mathf.Sin(Time.time * velocidad); // hace un efecto de movimiento mas fluido con la funcion sin
         transform.position = v;
     }
 

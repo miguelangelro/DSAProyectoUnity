@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
                         "aaccc      bb       cccaa                         \n" +
                         "aaccc  x   bb       cccaa                         \n" +
                         "aaccc  x   bb       cvcaa                         \n" +
-                        "aaccc      bb       cvcaa                         \n" +
+                        "aaccc    Y bb       cvcaa                         \n" +
                         "aaccc           p   cvcaa                         \n" +
                         "aaccc  gg   @   g   cvcaa                         \n" +
                         "aacvccccAccccccccccccccaa                         \n" +
@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
                         "aacvc               cccaa\n" +
                         "aaccc             x cccaa\n" +
                         "aaccc           x   cccaa\n" +
-                        "aacccgg        x    cvcaa\n" +
+                        "aacccgg    Y   x    cvcaa\n" +
                         "aaccc               cvcaa\n" +
                         "aaccc           x   cvcaa\n" +
                         "aaccc  g    @       cvcaa\n" +
