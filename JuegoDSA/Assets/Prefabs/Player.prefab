@@ -168,6 +168,7 @@ MonoBehaviour:
   "playerDa\xF1ado": {fileID: 8300000, guid: ce37832042819684b98658c38caee287, type: 3}
   muerte: {fileID: 8300000, guid: 060e0e33edba54140abff42165f9fa37, type: 3}
   Canvas: {fileID: 0}
+  girado: 0
   animatorDialog: {fileID: 0}
   ciudadano: {fileID: 0}
   jugador: {fileID: 0}
@@ -234,4 +235,5 @@ MonoBehaviour:
   firePoint: {fileID: 976214258578813006}
   bulletPrefab: {fileID: 1539632861300792, guid: 281c1d3ffb998994baeca00f8d631d83,
     type: 3}
+  disparo: {fileID: 8300000, guid: fcae3d7788702104b8f746880ea645ea, type: 3}
   bulletForce: 20

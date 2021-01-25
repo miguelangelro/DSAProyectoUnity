@@ -7,6 +7,7 @@ public class PrefabWeapon : MonoBehaviour
 
 	public Transform firePoint;
 	public GameObject bulletPrefab;
+	public AudioClip disparo;
 
 	public float bulletForce = 20f;
 
@@ -24,5 +25,6 @@ public class PrefabWeapon : MonoBehaviour
 		GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 		Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 		rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+		SoundManager.instance.PlaySingle(disparo);
 	}
 }
