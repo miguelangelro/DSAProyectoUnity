@@ -12,6 +12,9 @@ TagManager:
   - USAFlag
   - WhiteHouse
   - ciudadano
+  - Disparo
+  - Contorno
+  - VirusY
   layers:
   - Default
   - TransparentFX
