@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
@@ -14,24 +15,46 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     float posx;
     float posy;
+    public Joystick joystick;
 
     public int maxHealth = 100; //vida maxima del player
-    public int currentHealth;
+    public int currentHealth = 100;
     public float restartLevelDelay = 1f;
 
+    private BoxCollider2D boxCollider;      //The BoxCollider2D component attached to this object.
+    public LayerMask blockingLayer;//Layer on which collision will be checked.
     public Animator transition;
-    public float transitionTime = 1f;
+    public float transitionTime = 3f;
+    public float tiempoEsperaAvion = 5f; //Tiempo que estara la pantalla con el avion.
+    public AudioClip playerDañado;
+    public AudioClip muerte;
+    public GameObject Canvas;
+    public bool girado = false;
 
-    //public GameObject CanvasPlane;
-    //public Canvas CanvasPlane;
-    //MeshRenderer renderBack;
-    public float tiempoEsperaAvion = 1f; //Tiempo que estara la pantalla con el avion.
+    public Animator animatorDialog;
 
-    //public HealthBar healthBar;
+    public GameObject ciudadano;
+    public PlayerMovement jugador;
+    public static GameManager instance = null;
+
+    public Dialogue dialog;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        boxCollider = GetComponent<BoxCollider2D>();
+        ciudadano = GameObject.Find("Ciudadano");
+        jugador = GameObject.Find("Player(Clone)").GetComponent<PlayerMovement>();
+        jugador.setJoystick(GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>());
+        
+        if (GameManager.instance.firstLoad)
+        {
+            currentHealth = maxHealth;
+            GameManager.instance.firstLoad = false;
+        } else
+        {
+            currentHealth = GameManager.instance.currentHealth;
+        }
+        
         //healthBar.SetMaxHealth(maxHealth);
         transform.position = new Vector2(this.posx, this.posy);//para iniciar en la posicion que queramos
         //CanvasPlane = GameObject.Find("CanvasImagePlane");
@@ -42,41 +65,112 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        SoundManager.instance.PlaySingle(playerDañado);
+        SoundManager.instance.PlaySingle(playerDañado);
         currentHealth -= damage;
+        setCurrentHealth(currentHealth);
 
         //healthBar.SetHealth(currentHealth);
 
-        if(currentHealth <= 0)
+        StartCoroutine(DamageAnimation());
+
+        if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+    
+
+
     void Die()
     {
+        SoundManager.instance.PlaySingle(muerte);
+        SoundManager.instance.musicSource.Stop();
         Debug.Log("Has muerto, falta poner una animacion de morision kisde");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
-
-
+        GameManager.instance.gameOver.SetActive(true);
+        Canvas = GameObject.Find("Canvas");
+        Canvas.SetActive(false);
     }
 
+
+    IEnumerator DamageAnimation()
+    {
+        SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
+
+        for (int i = 0; i < 3; i++)
+        {
+            foreach (SpriteRenderer sr in srs)
+            {
+                Color c = sr.color;
+                c.a = 0;
+                sr.color = c;
+            }
+
+            yield return new WaitForSeconds(.1f);
+
+            foreach (SpriteRenderer sr in srs)
+            {
+                Color c = sr.color;
+                c.a = 1;
+                sr.color = c;
+            }
+
+            yield return new WaitForSeconds(.1f);
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        #if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
+
+                movement.x = Input.GetAxisRaw("Horizontal");
+
+                movement.y= Input.GetAxisRaw("Vertical");
+
+        #elif UNITY_ANDROID
+                movement.x = joystick.Horizontal;
+
+                movement.y = joystick.Vertical;
+
+        #endif 
+
+        
+
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-    }
 
-    void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (movement.x != 0 || movement.y != 0)
+        {
 
+            Move(movement.x, movement.y);
+        }
+
+ 
+        
+
+        
+
+        if (MovimientoAleatorio.instance != null)
+        {
+            if (Vector2.Distance(transform.position, MovimientoAleatorio.instance.transform.position) < 0.5f)
+            {
+                MovimientoAleatorio.instance.StopMoving();
+                DialogManager.instance.animatorDialog.SetBool("HelpOpened", true);
+            }
+
+            else if (DialogManager.instance.animatorDialog != null)
+            {
+                MovimientoAleatorio.instance.StartMoving();
+                DialogManager.instance.animatorDialog.SetBool("HelpOpened", false);
+                DialogManager.instance.animator.SetBool("isOpened", false);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -84,26 +178,27 @@ public class PlayerMovement : MonoBehaviour
         //Check if the tag of the trigger collided with is Exit.
         if (other.tag == "Plane")
         {
-            LoadLevel();
-            Invoke("Restart", restartLevelDelay);
-
+            if(GameManager.instance.level ==2)
+            {
+                LoadLevel();
+                Invoke("Restart", restartLevelDelay);
+            }
+            else
+            {
+                GameManager.instance.CanvasImagePlane.SetActive(true);
+                GameManager.instance.currentHealth = currentHealth;
+                new WaitForSeconds(tiempoEsperaAvion);
+                LoadLevel();
+                Invoke("Restart", restartLevelDelay);
+                //enabled = false;
+            }
+        }
+        else if (other.tag == "ciudadano")
+        {
+            MovimientoAleatorio.instance.StopMoving();
+            DialogManager.instance.animatorDialog.SetBool("HelpOpened", true);
         }
     }
-    //private void ShowImage()
-    //{
-    //    //BackgroundImage = GameObject.Find("CanvasPlane");
-    //    //levelText = GameObject.Find("Text");
-    //    BackgroundImage.SetActive(true);
-
-    //    new WaitForSeconds(1f);
-    //    HideLevelImage();
-    //}
-
-    //private void HideLevelImage()
-    //{
-    //    //backgroundImage = GameObject.Find("CanvasPlane");
-    //    BackgroundImage.SetActive(false);
-    //}
 
     IEnumerator LoadLevel()
     {
@@ -116,18 +211,68 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 
-    public void SetPosition(float x, float y) {
+
+    public void SetPosition(float x, float y)
+    {
         this.posx = x;
         this.posy = y;
 
     }
 
-    public float getPosX() {
+    void Move(float xDir, float yDir)
+    {
+        RaycastHit2D hit;
+        Vector2 start = transform.position;
+        Vector2 dir = new Vector2(xDir, yDir).normalized; // que tenga siempre magnitud 1
+        dir = dir * 0.5f; // lo escalo
+        Vector2 end = start + dir;
+
+        boxCollider.enabled = false;
+        hit = Physics2D.Linecast(start, end, blockingLayer);
+
+        boxCollider.enabled = true;
+
+        
+
+
+            if (hit.transform == null)
+            {
+                rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+            }
+            else
+            {
+                Debug.DrawLine(start, end);
+                Debug.Log("COLISION");
+            }
+
+
+    }
+
+
+    public float getPosX()
+    {
 
         return this.posx;
     }
 
-    public float getPosY() {
+    public float getPosY()
+    {
         return this.posy;
+    }
+
+    public void setCurrentHealth(int currentHealth)
+    {
+        this.currentHealth = currentHealth;
+    }
+
+    public void setJoystick(Joystick controller)
+    {
+        this.joystick = controller;
+    }
+
+    public float getCurrentHealth()
+    {
+        return this.currentHealth;
     }
 }

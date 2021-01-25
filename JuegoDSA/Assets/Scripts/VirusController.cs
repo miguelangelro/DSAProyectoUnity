@@ -11,6 +11,7 @@ public class VirusController : MonoBehaviour
     private Vector2 startPos;
     float posx;
     float posy;
+    public bool dañado=false;
 
     public Animator animator;
 
@@ -19,32 +20,45 @@ public class VirusController : MonoBehaviour
     public LayerMask playerLayers; //para saber a quien ataca (en principio solo al jugador, he creado un layer player pero tal vez habra que poner mas como por ejemplo ciudadanos)
 
     public int attackDamage = 40;
-
+    public GameObject player;
+    private int d = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //gameObject.SetActive(false); //de esta manera el virus desaparce pero no se destruye. Esto es intersante y se podria hacer
         // que el virus2 (más dificil) una vez choquemos, en vez de irse, pasados x segundos vuelva a aparecer
-        Ataque();
-        Destroy(gameObject,0.5f); //este sí lo destruye por completo. el 0.5f es el delay. Aprovechamos este delay para que el virus haga la animacion de atacar
-
         //Ataque();
+        if (d != 0)
+            return;
+        else
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                d++;
+                animator.SetTrigger("Ataque");
+
+                player.GetComponent<PlayerMovement>().TakeDamage(attackDamage);
+                Destroy(gameObject, 0.5f); //este sí lo destruye por completo. el 0.5f es el delay. Aprovechamos este delay para que el virus haga la animacion de atacar
+            }
+        }
 
     }
 
-    void Ataque()
+    /*void Ataque()
     {
         animator.SetTrigger("Ataque");
 
-        Collider2D[] hit = Physics2D.OverlapCircleAll(attackPoint.position, rangoAtaque,playerLayers); //crea un circulo del punto que hemos dicho en attackpoint con el radio que le hemos dicho y colecta todos los objetos que colisiona en el.
+        //Collider2D[] hit = Physics2D.OverlapCircleAll(attackPoint.position, rangoAtaque,playerLayers); //crea un circulo del punto que hemos dicho en attackpoint con el radio que le hemos dicho y colecta todos los objetos que colisiona en el.
 
         foreach (Collider2D player in hit) // para todos los jugadors dañalos
         {
-            player.GetComponent<PlayerMovement>().TakeDamage(attackDamage);
+            
+                player.GetComponent<PlayerMovement>().TakeDamage(attackDamage);
+   
         
-        } 
+        }
+        
 
-
-    }
+    }*/
 
     void OnDrawGizmosSelected()
     {
@@ -59,12 +73,14 @@ public class VirusController : MonoBehaviour
     {
         transform.position = new Vector2(this.posx, this.posy);//Se inicia en la posicion que ocupa el carácter
         startPos = transform.position;
+        player = GameObject.Find("Player(Clone)");
+        
     }
 
     void Update()
     {
         Vector2 v = startPos;
-        v.x += delta * Mathf.Sin(Time.time * velocidad);
+        v.x += delta * Mathf.Sin(Time.time * velocidad); // hace un efecto de movimiento mas fluido con la funcion sin
         transform.position = v;
     }
 

@@ -8,12 +8,16 @@ using System.Security.Cryptography;
 public class BoardManager : MonoBehaviour
 {
     public GameObject acera;
+    public GameObject[] ciudadano;
     public GameObject carretera;
+    public GameObject moneda;
     public GameObject carreteraVertical;
     public GameObject carreteraHorizontal;
     public GameObject player;
     public GameObject contorno;
     public GameObject plane;
+    public GameObject USAFlag;
+    public GameObject whiteHouse;
     public GameObject[] cespedTiles;
     public GameObject[] bigben;
     public GameObject[] virus;
@@ -26,6 +30,8 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder4;
     private Transform boardHolder5;
     private Transform boardHolder6;
+    private Transform boardHolder7;
+    private Transform boardHolder8;
     //public int numMapa;
 
    // MeshRenderer renderBack;
@@ -52,7 +58,9 @@ public class BoardManager : MonoBehaviour
         boardHolder3 = new GameObject("BigBen").transform;
         boardHolder4 = new GameObject("Jugadores").transform;
         boardHolder5 = new GameObject("Virus").transform;
-        boardHolder6 = new GameObject("Plane").transform;
+        boardHolder6 = new GameObject("Items").transform;
+        boardHolder7 = new GameObject("Avion").transform;
+        boardHolder8 = new GameObject("USAFlag").transform;
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 
@@ -113,7 +121,20 @@ public class BoardManager : MonoBehaviour
                         break;
 
                     case 'A':
-                        instance = Instantiate(plane, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        GameObject avion = Instantiate(plane, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        avion.transform.SetParent(boardHolder7);
+                        break;
+                    case 'F':
+                        GameObject USAflag = Instantiate(USAFlag, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        USAflag.transform.SetParent(boardHolder8);
+                        break;
+
+                    case 'W':
+                        GameObject casaBlanca  = Instantiate(whiteHouse, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(carretera, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        casaBlanca.transform.SetParent(boardHolder6);
                         break;
 
                     case 'x': //Virus
@@ -132,6 +153,14 @@ public class BoardManager : MonoBehaviour
                         cepa.transform.SetParent(boardHolder5);
                         break;
 
+                    case '!': //Virus3
+                        GameObject boss = Instantiate(virus[2], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        BossVirus final = boss.GetComponent<BossVirus>();
+                        final.SetPosition(xmapa, ymapa);
+                        boss.transform.SetParent(boardHolder5);
+                        break;
+
                     case 'b':
                         GameObject ben = Instantiate(bigben[i], new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
@@ -139,6 +168,22 @@ public class BoardManager : MonoBehaviour
                         ben.transform.SetParent(boardHolder3);
                         if (i == 25)
                             i = 0;
+                        break;
+
+                    case 'g':
+                        GameObject oro = Instantiate(moneda, new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        Coin or = oro.GetComponent<Coin>();
+                        or.SetPosition(xmapa, ymapa);
+                        oro.transform.SetParent(boardHolder6);
+                        break;
+
+                    case 'p':
+                        GameObject person = Instantiate(ciudadano[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[0], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        MovimientoAleatorio mov = person.GetComponent<MovimientoAleatorio>();
+                        mov.SetPosition(xmapa, ymapa);
+                        person.transform.SetParent(boardHolder4);
                         break;
 
                     case '@': //Aqui supongo que el jugador esta de pie en cesped.
@@ -164,16 +209,4 @@ public class BoardManager : MonoBehaviour
 
     }
 
-    //private void ShowImage()
-    //{
-        //backgroundImage.GetComponent<Renderer>().enabled = true;
-        
-        //renderBack.enabled = true;
-    //}
-
-    //private void HideLevelImage()
-    //{
-        //backgroundImage.GetComponent<Renderer>().enabled = false;
-        //renderBack.enabled = false;
-    //}
 }

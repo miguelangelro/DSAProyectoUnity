@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6106427356569002992}
   - component: {fileID: 2018646078028389700}
   - component: {fileID: 502277853301895441}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Virus2
   m_TagString: Virus
   m_Icon: {fileID: 0}
@@ -149,12 +149,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delta: 1.5
   velocidad: 3.5
+  "da\xF1ado": 0
   animator: {fileID: 6106427356569002995}
   attackPoint: {fileID: 7917116519474089552}
-  rangoAtaque: 0.53
+  rangoAtaque: 0.6
   playerLayers:
     serializedVersion: 2
     m_Bits: 512
+  attackDamage: 40
 --- !u!61 &2018646078028389700
 BoxCollider2D:
   m_ObjectHideFlags: 0

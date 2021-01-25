@@ -1,0 +1,1220 @@
+fileFormatVersion: 2
+guid: 7a7a67037bf41f94aa487939ce5deb27
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6128108290132578991
+    second: Usa stick Flag 600x400_0
+  - first:
+      213: -6654835376107655497
+    second: Usa stick Flag 600x400_1
+  - first:
+      213: 7917560417671897310
+    second: Usa stick Flag 600x400_2
+  - first:
+      213: 1461777257086556827
+    second: Usa stick Flag 600x400_3
+  - first:
+      213: 8256882252639485206
+    second: Usa stick Flag 600x400_4
+  - first:
+      213: 8677287030270664950
+    second: Usa stick Flag 600x400_5
+  - first:
+      213: 5399599020469931109
+    second: Usa stick Flag 600x400_6
+  - first:
+      213: -4639803548635686499
+    second: Usa stick Flag 600x400_7
+  - first:
+      213: -5674913290776714329
+    second: Usa stick Flag 600x400_8
+  - first:
+      213: -2938359249459017651
+    second: Usa stick Flag 600x400_9
+  - first:
+      213: 2376111197743577553
+    second: Usa stick Flag 600x400_10
+  - first:
+      213: 7938604974021855000
+    second: Usa stick Flag 600x400_11
+  - first:
+      213: 6579293184983499821
+    second: Usa stick Flag 600x400_12
+  - first:
+      213: -2327021394907878530
+    second: Usa stick Flag 600x400_13
+  - first:
+      213: 344982205558273454
+    second: Usa stick Flag 600x400_14
+  - first:
+      213: -6140327846983861911
+    second: Usa stick Flag 600x400_15
+  - first:
+      213: 7014316777712733144
+    second: Usa stick Flag 600x400_16
+  - first:
+      213: -7914871896254604722
+    second: Usa stick Flag 600x400_17
+  - first:
+      213: -4158262916058367575
+    second: Usa stick Flag 600x400_18
+  - first:
+      213: -4725707502298181400
+    second: Usa stick Flag 600x400_19
+  - first:
+      213: 7759493077251890008
+    second: Usa stick Flag 600x400_20
+  - first:
+      213: 4090490864809182255
+    second: Usa stick Flag 600x400_21
+  - first:
+      213: -1332205125709707031
+    second: Usa stick Flag 600x400_22
+  - first:
+      213: 7905588479489589109
+    second: Usa stick Flag 600x400_23
+  - first:
+      213: 4094046913703846010
+    second: Usa stick Flag 600x400_24
+  - first:
+      213: -6827808106811270451
+    second: Usa stick Flag 600x400_25
+  - first:
+      213: -6639889099961079820
+    second: Usa stick Flag 600x400_26
+  - first:
+      213: 7735278489732863776
+    second: Usa stick Flag 600x400_27
+  - first:
+      213: -7451371041747180795
+    second: Usa stick Flag 600x400_28
+  - first:
+      213: -5852812579183940854
+    second: Usa stick Flag 600x400_29
+  - first:
+      213: 969527065751764708
+    second: Usa stick Flag 600x400_30
+  - first:
+      213: -9150508474635466663
+    second: Usa stick Flag 600x400_31
+  - first:
+      213: 6628874366034240337
+    second: Usa stick Flag 600x400_32
+  - first:
+      213: -4998581466130511883
+    second: Usa stick Flag 600x400_33
+  - first:
+      213: -913652241102431120
+    second: Usa stick Flag 600x400_34
+  - first:
+      213: 6430500423530742449
+    second: Usa stick Flag 600x400_35
+  - first:
+      213: 3235996753000982619
+    second: Usa stick Flag 600x400_36
+  - first:
+      213: 4748466993522182745
+    second: Usa stick Flag 600x400_37
+  - first:
+      213: 5564031909967938296
+    second: Usa stick Flag 600x400_38
+  - first:
+      213: -3024116622513249114
+    second: Usa stick Flag 600x400_39
+  - first:
+      213: 4814959918756569535
+    second: Usa stick Flag 600x400_40
+  - first:
+      213: 2866630571448817600
+    second: Usa stick Flag 600x400_41
+  - first:
+      213: 5949559275571289547
+    second: Usa stick Flag 600x400_42
+  - first:
+      213: -2218262938015832696
+    second: Usa stick Flag 600x400_43
+  - first:
+      213: -1762551860116286444
+    second: Usa stick Flag 600x400_44
+  - first:
+      213: 4330584396525091523
+    second: Usa stick Flag 600x400_45
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2397
+        width: 592
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa29a72950a6b0550800000000000000
+      internalID: 6128108290132578991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_1
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 2397
+        width: 595
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be6668fb7645a3a0800000000000000
+      internalID: -6654835376107655497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_2
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 2397
+        width: 596
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0e6073043d0ed60800000000000000
+      internalID: 7917560417671897310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_3
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 2397
+        width: 594
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a9365aba6494410800000000000000
+      internalID: 1461777257086556827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_4
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 2397
+        width: 596
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dbdc479a6569270800000000000000
+      internalID: 8256882252639485206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_5
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 2397
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0236d649aeb6870800000000000000
+      internalID: 8677287030270664950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_6
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 2397
+        width: 602
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c48a863ba3fea40800000000000000
+      internalID: 5399599020469931109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1997
+        width: 592
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9919f7514b1c9fb0800000000000000
+      internalID: -4639803548635686499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_8
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1997
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a36c14dd68ae31b0800000000000000
+      internalID: -5674913290776714329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_9
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1997
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d480389a4d9d837d0800000000000000
+      internalID: -2938359249459017651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_10
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 1997
+        width: 594
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d975509b84a9f020800000000000000
+      internalID: 2376111197743577553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_11
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 1997
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817c8b0d9279b2e60800000000000000
+      internalID: 7938604974021855000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_12
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 1997
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24071c0b485e4b50800000000000000
+      internalID: 6579293184983499821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_13
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 1997
+        width: 602
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b28c3de52c4bfd0800000000000000
+      internalID: -2327021394907878530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1597
+        width: 592
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5b128fc7f99c400800000000000000
+      internalID: 344982205558273454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_15
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1597
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96976142b5c29caa0800000000000000
+      internalID: -6140327846983861911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_16
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1597
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db41a522fbd75160800000000000000
+      internalID: 7014316777712733144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_17
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 1597
+        width: 594
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a9505f1f9b82290800000000000000
+      internalID: -7914871896254604722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_18
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 1597
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a939a5c8e1ea46c0800000000000000
+      internalID: -4158262916058367575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_19
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 1597
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e05e15801aea6eb0800000000000000
+      internalID: -4725707502298181400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_20
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 1597
+        width: 602
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b93ba97d14fab60800000000000000
+      internalID: 7759493077251890008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1197
+        width: 592
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f248ee9e4c754c830800000000000000
+      internalID: 4090490864809182255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_22
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1197
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e84e1a1f7e038de0800000000000000
+      internalID: -1332205125709707031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_23
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1197
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fb56426da46bd60800000000000000
+      internalID: 7905588479489589109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_24
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 1197
+        width: 594
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a702a111af9f0d830800000000000000
+      internalID: 4094046913703846010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_25
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 1197
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca5bfeb3b0ce31a0800000000000000
+      internalID: -6827808106811270451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_26
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 1197
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7e4d01b006ad3a0800000000000000
+      internalID: -6639889099961079820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_27
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 1197
+        width: 602
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0275f3b9dca395b60800000000000000
+      internalID: 7735278489732863776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 797
+        width: 592
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503e60f3489679890800000000000000
+      internalID: -7451371041747180795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_29
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 797
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0badc008f1a6cea0800000000000000
+      internalID: -5852812579183940854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_30
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 797
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eeb242cab3747d00800000000000000
+      internalID: 969527065751764708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_31
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 797
+        width: 594
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958c627160dd20180800000000000000
+      internalID: -9150508474635466663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_32
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 797
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153e9285d1e7efb50800000000000000
+      internalID: 6628874366034240337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_33
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 797
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f78072e3a871aab0800000000000000
+      internalID: -4998581466130511883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_34
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 797
+        width: 602
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c99d0a02e0253f0800000000000000
+      internalID: -913652241102431120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 592
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b28c80a01abd3950800000000000000
+      internalID: 6430500423530742449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 397
+        width: 592
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58e0fcd6e198ec20800000000000000
+      internalID: 3235996753000982619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_37
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 0
+        width: 595
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a8e887291f5e140800000000000000
+      internalID: 4748466993522182745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_38
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 397
+        width: 595
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2c398ea89673d40800000000000000
+      internalID: 5564031909967938296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_39
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 0
+        width: 596
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a46ebb44fd2806d0800000000000000
+      internalID: -3024116622513249114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_40
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 397
+        width: 596
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1aa3d098c22d240800000000000000
+      internalID: 4814959918756569535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_41
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 0
+        width: 594
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c75b71115158c720800000000000000
+      internalID: 2866630571448817600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_42
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 397
+        width: 594
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd9e8693a4119250800000000000000
+      internalID: 5949559275571289547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_43
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 397
+        width: 596
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885e6295c952731e0800000000000000
+      internalID: -2218262938015832696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_44
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 397
+        width: 595
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414909feb682a87e0800000000000000
+      internalID: -1762551860116286444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Usa stick Flag 600x400_45
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 337
+        width: 602
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca3ab07093591c30800000000000000
+      internalID: 4330584396525091523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
