@@ -3600,7 +3600,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GAME OVER
+  m_Text: 'GAME OVER
+
+
+    confinado 14 dias'
 --- !u!222 &1566844142
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5898,7 +5901,12 @@ PrefabInstance:
     - target: {fileID: 5651956005890500573, guid: bc986aa523b117d41b9582d618d7122e,
         type: 3}
       propertyPath: m_Text
-      value: YOU WIN!!
+      value: 'ENHORABUENA!!
+
+
+        Has derrotado al Covid!
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 5651956005890500573, guid: bc986aa523b117d41b9582d618d7122e,
         type: 3}

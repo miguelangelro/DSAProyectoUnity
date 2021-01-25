@@ -26,6 +26,9 @@ public class BossHealth : MonoBehaviour
 		if (health <= 0)
 		{
 			Die();
+			GameManager.instance.winnerText.text = "Score: " + GameManager.instance.score;
+			GameManager.instance.winnerText.fontSize = 45;
+			GameManager.instance.winner.SetActive(true);
 		}
 	}
 
