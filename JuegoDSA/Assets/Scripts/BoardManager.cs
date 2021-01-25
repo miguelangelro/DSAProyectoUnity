@@ -159,8 +159,16 @@ public class BoardManager : MonoBehaviour
                         cepa.transform.SetParent(boardHolder5);
                         break;
 
+                    case 'Y': //Virus2Y
+                        GameObject cepaY = Instantiate(virus[2], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity); //Lo pongo sobre la carretera (ejemplo)
+                        VirusControllerY viY = cepaY.GetComponent<VirusControllerY>();
+                        viY.SetPosition(xmapa, ymapa);
+                        cepaY.transform.SetParent(boardHolder5);
+                        break;
+
                     case '!': //Virus3
-                        GameObject boss = Instantiate(virus[2], new Vector2(xmapa, ymapa), Quaternion.identity);
+                        GameObject boss = Instantiate(virus[3], new Vector2(xmapa, ymapa), Quaternion.identity);
                         instance = Instantiate(cespedTiles[1], new Vector2(xmapa, ymapa), Quaternion.identity);
                         BossVirus final = boss.GetComponent<BossVirus>();
                         final.SetPosition(xmapa, ymapa);
