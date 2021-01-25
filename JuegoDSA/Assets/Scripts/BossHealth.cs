@@ -5,7 +5,8 @@ using UnityEngine;
 public class BossHealth : MonoBehaviour
 {
 
-	public int health = 500;
+	public int health = 1500;
+	public int currentHealth = 1500;
 
 	public GameObject deathEffect;
 
@@ -16,14 +17,14 @@ public class BossHealth : MonoBehaviour
 		if (isInvulnerable)
 			return;
 
-		health -= damage;
+		currentHealth -= damage;
 
-		if (health <= 200)
+		if (currentHealth <= 200)
 		{
 			GetComponent<Animator>().SetBool("IsEnraged", true);
 		}
 
-		if (health <= 0)
+		if (currentHealth <= 0)
 		{
 			Die();
 			GameManager.instance.winnerText.text = "Score: " + GameManager.instance.score;
@@ -36,6 +37,11 @@ public class BossHealth : MonoBehaviour
 	{
 		Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);
+	}
+
+	public void setCurrentHealth(int currentHealth)
+	{
+		this.currentHealth = currentHealth;
 	}
 
 }

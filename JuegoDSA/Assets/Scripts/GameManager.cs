@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
                         "aacvcY                 Y                     cccaa\n" +
                         "aacvc        HHHHHHH       HHHHHHH           cccaa\n" +
                         "aaccc                             p          cvcaa\n" +
-                        "aaccc  gg              @                 gg  cvcaa\n" +
+                        "aaccc  gg              @  A              gg  cvcaa\n" +
                         "aacvccccccccccccccccccccccccccccccccccccccccccccaa\n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n" +
                         "                                                  \n";
@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
                         "aaccc     HHHH       HHHHHHHH       HHHH     cvcaa\n" +
                         "aaccc          HHHH            HHHH          cvcaa\n" +
                         "aaccc              HHHH   HHHH               cvcaa\n" +
-                        "aaccc                   @                    cvcaa\n" +
+                        "aaccc                   @   A                cvcaa\n" +
                         "aaccccccccccccccccccccccccccccccccccccccccccccccaa\n" +
                         "aaccchhhhcccchhhhcccchhhhcccchhhhcccchhhhcccccccaa\n" +
                         "aacvccccccccccccccccccccccccccccccccccccccccccccaa\n" +
@@ -126,13 +126,14 @@ public class GameManager : MonoBehaviour
             instance.infoMapa = "25 7                    \n" +
 
                         "                         \n" +
+                        "               H         \n" +
                         "                         \n" +
-                        "                         \n" +
-                        "                         \n" +
-                        "                         \n" +
-                        "    @          !         \n" +
-                        "aaaaaaaaaaaaaaaaaaaaaaaaa\n";
+                        "      H           H       \n" +
+                        "          H           H  \n" +
+                        "    @ H      H !         \n" +
+                        "aaaaaaaaaHaaaaaaaaaaaaaaa\n";
         }
+
         else if(instance.level > 3)
         {
             instance.winnerText.text = "Score: " + instance.score;

@@ -45,10 +45,10 @@ public class Camara : MonoBehaviour
 
         if (GameManager.instance.level == 3)
         {
-            minPosition.x = 7f;
-            maxPosition.x = 19.2f;
-            minPosition.y = 2.6f;
-            maxPosition.y = 2.3f;
+            minPosition.x = 4.6f;
+            maxPosition.x = 19.7f;
+            minPosition.y = 2.5f;
+            maxPosition.y = 2.6f;
 
         }
 
