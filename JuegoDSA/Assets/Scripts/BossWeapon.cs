@@ -10,6 +10,7 @@ public class BossWeapon : MonoBehaviour
 	public Vector3 attackOffset;
 	public float attackRange = 1f;
 	public LayerMask attackMask;
+	public bool cdv =false;
 
 	void Start()
 	{
@@ -20,9 +21,19 @@ public class BossWeapon : MonoBehaviour
 	}
 	public void Attack()
 	{
-		player.GetComponent<PlayerMovement>().TakeDamage(attackDamage);
+		if (cdv == false)
+		{
+			player.GetComponent<PlayerMovement>().TakeDamage(attackDamage);
+			cdv = true;
+			Invoke("SetBoolBack", 0.7f);
+		}
 	}
 
+
+	private void SetBoolBack()
+	{
+		cdv = false;
+	}
 	public void EnragedAttack()
 	{
 		Vector3 pos = transform.position;
