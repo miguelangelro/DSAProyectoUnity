@@ -10,15 +10,16 @@ public class ObjetosLines : MonoBehaviour
     public Text RegeneradorCantidad;
     public Text BolsaBasuraCantidad;
     public Text PCRCantidad;
-
+    PlayerMovement jug;
     public void Start()
     {
-        
+        jug = GameObject.Find("Player(Clone)").GetComponent<PlayerMovement>();
         //UpdateRankingLinea();
     }
 
     public void UpdateRankingLinea()
     {
+        
         GameManager.instance.inventario.SetActive(true);
         MascCantidad = GameObject.Find("CantidadMasc").GetComponent<Text>();
         PocionCantidad = GameObject.Find("CantidadPocion").GetComponent<Text>();
@@ -26,11 +27,11 @@ public class ObjetosLines : MonoBehaviour
         BolsaBasuraCantidad = GameObject.Find("CantidadBas").GetComponent<Text>();
         PCRCantidad = GameObject.Find("CantidadPCR").GetComponent<Text>();
         //EN TEORIA AQUI SE DEBE PONER EN LA CASILLA DEL INVENTARIO
-        MascCantidad.text = "1";
-        PocionCantidad.text = "1";
-        RegeneradorCantidad.text = "0";
-        BolsaBasuraCantidad.text = "0";
-        PCRCantidad.text = "0";
+        MascCantidad.text = jug.mascarilla;
+        PocionCantidad.text = jug.pocion;
+        RegeneradorCantidad.text = jug.regeneron;
+        BolsaBasuraCantidad.text = jug.bolsa;
+        PCRCantidad.text = jug.pcr;
     }
 
     public void CloseInventario()

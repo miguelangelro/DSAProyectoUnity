@@ -27,9 +27,7 @@ public class BossHealth : MonoBehaviour
 		if (currentHealth <= 0)
 		{
 			Die();
-			GameManager.instance.winnerText.text = "Score: " + GameManager.instance.score;
-			GameManager.instance.winnerText.fontSize = 45;
-			GameManager.instance.winner.SetActive(true);
+			
 		}
 	}
 
@@ -37,6 +35,17 @@ public class BossHealth : MonoBehaviour
 	{
 		Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);
+		GameManager.instance.winnerText.text = "Score: " + GameManager.instance.score;
+		GameManager.instance.winnerText.fontSize = 45;
+		GameManager.instance.winner.SetActive(true);
+
+		if (Application.platform == RuntimePlatform.Android)
+		{
+			string score = GameManager.instance.score + "," + GameManager.instance.currentHealth;
+			AndroidJavaClass UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+			AndroidJavaObject currentActivity = UnityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+			currentActivity.Call("resultadoScore", score);//resultadoScore es el method en UnityPlayer
+		}
 	}
 
 	public void setCurrentHealth(int currentHealth)

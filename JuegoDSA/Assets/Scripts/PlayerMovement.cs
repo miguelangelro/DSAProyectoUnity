@@ -16,11 +16,16 @@ public class PlayerMovement : MonoBehaviour
     float posx;
     float posy;
     public Joystick joystick;
-
+    
     public int maxHealth = 100; //vida maxima del player
     public int currentHealth = 100;
     public float restartLevelDelay = 1f;
-
+    public string name;
+    public string bolsa;
+    public string mascarilla;
+    public string pocion;
+    public string regeneron;
+    public string pcr;
     private BoxCollider2D boxCollider;      //The BoxCollider2D component attached to this object.
     public LayerMask blockingLayer;//Layer on which collision will be checked.
     public Animator transition;
@@ -45,7 +50,27 @@ public class PlayerMovement : MonoBehaviour
         ciudadano = GameObject.Find("Ciudadano");
         jugador = GameObject.Find("Player(Clone)").GetComponent<PlayerMovement>();
         jugador.setJoystick(GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>());
-        
+
+        if (Application.platform == RuntimePlatform.Android)
+        {
+
+            AndroidJavaClass UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            AndroidJavaObject currentActivity = UnityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+
+            AndroidJavaObject intent = currentActivity.Call<AndroidJavaObject>("getIntent");
+            bool hasExtra = intent.Call<bool>("hasExtra", "arguments");
+
+            if (hasExtra)
+            {
+                AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
+                string objetos = extras.Call<string>("getString", "arguments");
+               
+                setObjetos(objetos.Split(' ')[0], objetos.Split(' ')[1], objetos.Split(' ')[2], objetos.Split(' ')[3], objetos.Split(' ')[4], objetos.Split(' ')[5]);
+
+
+            }
+        }
+
         if (GameManager.instance.firstLoad)
         {
             currentHealth = maxHealth;
@@ -61,6 +86,17 @@ public class PlayerMovement : MonoBehaviour
         //renderBack = BackgroundImage.GetComponentInChildren<MeshRenderer>();
         //CanvasPlane = GameObject.Find("CanvasPlane").GetComponent<Canvas>();
         //CanvasPlane = GetComponent<Canvas>();
+
+        
+    }
+
+    public void setObjetos(string name, string bolsa,string mascarilla,string pocion,string regeneron,string pcr) {
+        this.name = name;
+        this.bolsa = bolsa;
+        this.mascarilla = mascarilla;
+        this.pocion = pocion;
+        this.regeneron = regeneron;
+        this.pcr = pcr;
     }
 
     public void TakeDamage(int damage)
