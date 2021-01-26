@@ -3,7 +3,14 @@ guid: 32fe6f783f7934f6d8961f5b30b0a965
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - boardScript: {instanceID: 0}
+  - CanvasImagePlane: {instanceID: 0}
+  - gameOver: {instanceID: 0}
+  - winner: {instanceID: 0}
+  - inventario: {fileID: 8742950115525866487, guid: b5e341604e1d37c4b95a1804feb21b2b,
+      type: 3}
+  - winnerText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

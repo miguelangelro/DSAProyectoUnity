@@ -24,6 +24,7 @@ public class BoardManager : MonoBehaviour
     public GameObject backgroundImage;
     public GameObject obras;
     public GameObject señalObras;
+    public GameObject btnInventario;
     float xmapa;
     float ymapa;
     private Transform boardHolder;
@@ -36,6 +37,7 @@ public class BoardManager : MonoBehaviour
     private Transform boardHolder8;
     private Transform boardHolder9;
     private Transform boardHolder10;
+    private Transform boardHolder11;
     //public int numMapa;
 
     // MeshRenderer renderBack;
@@ -67,6 +69,8 @@ public class BoardManager : MonoBehaviour
         boardHolder8 = new GameObject("USAFlag").transform;
         boardHolder9 = new GameObject("obras").transform;
         boardHolder10 = new GameObject("señalObras").transform;
+        boardHolder11 = new GameObject("inventarioBtn").transform;
+
 
         //Ponemos una pared o el objeto que escojamos en el contorno del mapa (Lo mismo que los outerwalls)
 

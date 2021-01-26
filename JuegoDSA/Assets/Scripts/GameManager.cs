@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject CanvasImagePlane;
     public GameObject gameOver;
     public GameObject winner;
+    public GameObject inventario;
     public Text winnerText;
     public int currentHealth = 100;
     public int maxHealth = 100;
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(false);
         winner = GameObject.Find("CanvasWIN");
         winnerText = GameObject.Find("txtScore").GetComponent<Text>();
+        inventario = GameObject.Find("CanvasInventario");
+        inventario.SetActive(false);
         winner.SetActive(false);
         instance.level++;
         if (instance.level == 1)
@@ -76,7 +79,7 @@ public class GameManager : MonoBehaviour
                         "aacvcY                 Y                     cccaa\n" +
                         "aacvc        HHHHHHH       HHHHHHH           cccaa\n" +
                         "aaccc                             p          cvcaa\n" +
-                        "aaccc  gg              @  A              gg  cvcaa\n" +
+                        "aaccc  gg              @                 gg  cvcaa\n" +
                         "aacvccccccccccccccccccccccccccccccccccccccccccccaa\n" +
                         "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n" +
                         "                                                  \n";
@@ -114,7 +117,7 @@ public class GameManager : MonoBehaviour
                         "aaccc     HHHH       HHHHHHHH       HHHH     cvcaa\n" +
                         "aaccc          HHHH            HHHH          cvcaa\n" +
                         "aaccc              HHHH   HHHH               cvcaa\n" +
-                        "aaccc                   @   A                cvcaa\n" +
+                        "aaccc                   @                    cvcaa\n" +
                         "aaccccccccccccccccccccccccccccccccccccccccccccccaa\n" +
                         "aaccchhhhcccchhhhcccchhhhcccchhhhcccchhhhcccccccaa\n" +
                         "aacvccccccccccccccccccccccccccccccccccccccccccccaa\n" +
