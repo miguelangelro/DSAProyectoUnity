@@ -34,6 +34,39 @@ public class ObjetosLines : MonoBehaviour
         PCRCantidad.text = jug.pcr;
     }
 
+    public void mascarillaUsada()
+    {
+        MascCantidad.text = "1";
+        GameManager.instance.currentHealth = GameManager.instance.currentHealth + 20;
+        if (GameManager.instance.currentHealth >= 100)
+        {
+            GameManager.instance.currentHealth = GameManager.instance.maxHealth;
+        }
+    }
+    public void pocionUsada()
+    {
+        PocionCantidad.text = "4";
+        GameManager.instance.currentHealth = GameManager.instance.currentHealth + 50;
+        if (GameManager.instance.currentHealth >= 100)
+        {
+            GameManager.instance.currentHealth = GameManager.instance.maxHealth;
+        }
+    }
+
+    public void regeneracionUsado()
+    {
+        RegeneradorCantidad.text = "1";
+        GameManager.instance.currentHealth = GameManager.instance.maxHealth;
+    }
+    public void bolsaBasuraUsada()
+    {
+        BolsaBasuraCantidad.text = "1";
+    }
+    public void pcrUsado()
+    {
+        PCRCantidad.text = "1";
+    }
+
     public void CloseInventario()
     {
         GameManager.instance.inventario.SetActive(false);
