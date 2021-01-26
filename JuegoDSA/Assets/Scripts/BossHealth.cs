@@ -42,9 +42,10 @@ public class BossHealth : MonoBehaviour
 		if (Application.platform == RuntimePlatform.Android)
 		{
 			string score = GameManager.instance.score + "," + GameManager.instance.currentHealth;
-			AndroidJavaClass UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+
+			AndroidJavaClass UnityPlayer = new AndroidJavaClass("edu.upc.dsa.app_proyecto.ResultActivity");
 			AndroidJavaObject currentActivity = UnityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-			currentActivity.Call("resultadoScore", score);//resultadoScore es el method en UnityPlayer
+			currentActivity.Call("resultadoScore", score);//resultadoScore es el method en ResultActivity
 		}
 	}
 

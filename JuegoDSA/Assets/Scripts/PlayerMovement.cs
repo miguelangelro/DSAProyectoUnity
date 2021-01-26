@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     
     public int maxHealth = 100; //vida maxima del player
-    public int currentHealth = 100;
+    public int currentHealth;
     public float restartLevelDelay = 1f;
     public string name;
     public string bolsa;
@@ -50,7 +50,9 @@ public class PlayerMovement : MonoBehaviour
         ciudadano = GameObject.Find("Ciudadano");
         jugador = GameObject.Find("Player(Clone)").GetComponent<PlayerMovement>();
         jugador.setJoystick(GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>());
+        this.currentHealth = 100;
 
+        
         if (Application.platform == RuntimePlatform.Android)
         {
 
@@ -71,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        
+
         if (GameManager.instance.firstLoad)
         {
             currentHealth = maxHealth;
@@ -78,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         } else
         {
             currentHealth = GameManager.instance.currentHealth;
+            //setObjetos(GameManager.instance.);
         }
         
         //healthBar.SetMaxHealth(maxHealth);
@@ -97,6 +102,49 @@ public class PlayerMovement : MonoBehaviour
         this.pocion = pocion;
         this.regeneron = regeneron;
         this.pcr = pcr;
+    }
+
+    public void setBolsa(string bolsa) {
+        this.bolsa = bolsa;
+    }
+    public void setMascarilla(string mask)
+    {
+        this.mascarilla = mask;
+    }
+    public void setPocion(string p)
+    {
+        this.pocion = p;
+    }
+    public void setRegeneron(string reg)
+    {
+        this.regeneron = reg;
+    }
+    public void setPcr(string p)
+    {
+        this.pcr = p;
+    }
+
+
+
+    public string getBolsa()
+    {
+        return this.bolsa;
+    }
+    public string getMascarilla()
+    {
+        return this.mascarilla;
+    }
+    public string getPocion()
+    {
+        return this.pocion;
+    }
+    public string getRegeneron()
+    {
+        return this.regeneron;
+    }
+    public string getPcr()
+    {
+        return this.pcr;
     }
 
     public void TakeDamage(int damage)
@@ -215,20 +263,14 @@ public class PlayerMovement : MonoBehaviour
         //Check if the tag of the trigger collided with is Exit.
         if (other.tag == "Plane")
         {
-            if(GameManager.instance.level ==2)
-            {
-                LoadLevel();
-                Invoke("Restart", restartLevelDelay);
-            }
-            else
-            {
+            
                 GameManager.instance.CanvasImagePlane.SetActive(true);
                 GameManager.instance.currentHealth = currentHealth;
                 new WaitForSeconds(tiempoEsperaAvion);
                 LoadLevel();
                 Invoke("Restart", restartLevelDelay);
                 //enabled = false;
-            }
+           
         }
         else if (other.tag == "ciudadano")
         {
@@ -308,7 +350,7 @@ public class PlayerMovement : MonoBehaviour
         this.joystick = controller;
     }
 
-    public float getCurrentHealth()
+    public int getCurrentHealth()
     {
         return this.currentHealth;
     }

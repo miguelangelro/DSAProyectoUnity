@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ObjetosLines : MonoBehaviour
 {
@@ -15,6 +16,24 @@ public class ObjetosLines : MonoBehaviour
     {
         jug = GameObject.Find("Player(Clone)").GetComponent<PlayerMovement>();
         //UpdateRankingLinea();
+        if (GameManager.instance.firstLoad)
+        {
+            jug.setPocion("2");
+            jug.setMascarilla("3");
+            jug.setBolsa("4");
+            jug.setPcr("3");
+            jug.setRegeneron("1");
+        }
+        else {
+            jug.mascarilla = GameManager.instance.mask;
+            jug.pocion = GameManager.instance.pocion;
+            jug.bolsa = GameManager.instance.bolsa;
+            jug.pcr = GameManager.instance.pcr;
+            jug.regeneron = GameManager.instance.regeneron;
+
+        }
+
+        
     }
 
     public void UpdateRankingLinea()
@@ -32,39 +51,91 @@ public class ObjetosLines : MonoBehaviour
         RegeneradorCantidad.text = jug.regeneron;
         BolsaBasuraCantidad.text = jug.bolsa;
         PCRCantidad.text = jug.pcr;
+
+        GameManager.instance.mask = jug.mascarilla;
+        GameManager.instance.pocion = jug.pocion;
+        GameManager.instance.bolsa = jug.bolsa;
+        GameManager.instance.pcr = jug.pcr;
+        GameManager.instance.regeneron = jug.regeneron;
     }
 
     public void mascarillaUsada()
     {
-        MascCantidad.text = "1";
-        GameManager.instance.currentHealth = GameManager.instance.currentHealth + 20;
-        if (GameManager.instance.currentHealth >= 100)
+       int mask = Convert.ToInt32(this.jug.mascarilla);
+        if (mask > 0)
         {
-            GameManager.instance.currentHealth = GameManager.instance.maxHealth;
+            mask--;
+            if (jug.currentHealth >= 80)
+            {
+                jug.setCurrentHealth(GameManager.instance.maxHealth);
+            }
+            else { jug.setCurrentHealth(jug.currentHealth+20); }
+            MascCantidad.text = mask.ToString();
+            jug.setMascarilla(mask.ToString());
         }
+        
+       /*MascCantidad.text = "1";*/
+        
     }
     public void pocionUsada()
     {
-        PocionCantidad.text = "4";
-        GameManager.instance.currentHealth = GameManager.instance.currentHealth + 50;
-        if (GameManager.instance.currentHealth >= 100)
+        
+        int pocion = Convert.ToInt32(this.jug.pocion);
+        if (pocion > 0)
         {
-            GameManager.instance.currentHealth = GameManager.instance.maxHealth;
+            pocion--;
+            if (jug.currentHealth >= 50)
+            {
+                jug.setCurrentHealth(GameManager.instance.maxHealth);
+            }
+            else {
+                jug.setCurrentHealth(jug.currentHealth+50); }
+            PocionCantidad.text = pocion.ToString();
+            jug.setPocion(pocion.ToString());
         }
     }
 
     public void regeneracionUsado()
     {
-        RegeneradorCantidad.text = "1";
-        GameManager.instance.currentHealth = GameManager.instance.maxHealth;
+        int regen = Convert.ToInt32(this.jug.regeneron);
+        if (regen > 0)
+        {
+            regen--;
+            
+            jug.setCurrentHealth(GameManager.instance.maxHealth);
+            
+           
+            RegeneradorCantidad.text = regen.ToString();
+            jug.setRegeneron(regen.ToString());
+        }
     }
     public void bolsaBasuraUsada()
     {
-        BolsaBasuraCantidad.text = "1";
+        int bolsa = Convert.ToInt32(this.jug.bolsa);
+        if (bolsa > 0)
+        {
+            bolsa--;
+            BolsaBasuraCantidad.text = bolsa.ToString();
+            jug.setBolsa(bolsa.ToString());
+        }
     }
     public void pcrUsado()
     {
-        PCRCantidad.text = "1";
+        int pcr = Convert.ToInt32(this.jug.pcr);
+        if (pcr > 0)
+        {
+            pcr--;
+            if (jug.currentHealth >= 90)
+            {
+                jug.setCurrentHealth(GameManager.instance.maxHealth);
+            }
+            else
+            {
+                jug.setCurrentHealth(jug.currentHealth+10);
+            }
+            PCRCantidad.text = pcr.ToString();
+           jug.setPcr(pcr.ToString());
+        }
     }
 
     public void CloseInventario()
