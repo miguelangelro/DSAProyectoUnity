@@ -52,31 +52,29 @@ public class PlayerMovement : MonoBehaviour
         jugador.setJoystick(GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>());
         this.currentHealth = 100;
 
-        
-        if (Application.platform == RuntimePlatform.Android)
-        {
-
-            AndroidJavaClass UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-            AndroidJavaObject currentActivity = UnityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-
-            AndroidJavaObject intent = currentActivity.Call<AndroidJavaObject>("getIntent");
-            bool hasExtra = intent.Call<bool>("hasExtra", "arguments");
-
-            if (hasExtra)
-            {
-                AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
-                string objetos = extras.Call<string>("getString", "arguments");
-               
-                setObjetos(objetos.Split(' ')[0], objetos.Split(' ')[1], objetos.Split(' ')[2], objetos.Split(' ')[3], objetos.Split(' ')[4], objetos.Split(' ')[5]);
-
-
-            }
-        }
-
-        
+      
 
         if (GameManager.instance.firstLoad)
         {
+            if (Application.platform == RuntimePlatform.Android)
+            {
+
+                AndroidJavaClass UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+                AndroidJavaObject currentActivity = UnityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+
+                AndroidJavaObject intent = currentActivity.Call<AndroidJavaObject>("getIntent");
+                bool hasExtra = intent.Call<bool>("hasExtra", "arguments");
+
+                if (hasExtra)
+                {
+                    AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
+                    string objetos = extras.Call<string>("getString", "arguments");
+
+                    setObjetos(objetos.Split(' ')[0], objetos.Split(' ')[1], objetos.Split(' ')[2], objetos.Split(' ')[3], objetos.Split(' ')[4], objetos.Split(' ')[5]);
+
+
+                }
+            }
             currentHealth = maxHealth;
             GameManager.instance.firstLoad = false;
         } else

@@ -16,15 +16,8 @@ public class ObjetosLines : MonoBehaviour
     {
         jug = GameObject.Find("Player(Clone)").GetComponent<PlayerMovement>();
         //UpdateRankingLinea();
-        if (GameManager.instance.firstLoad)
+        if (!GameManager.instance.firstLoad)
         {
-            jug.setPocion("2");
-            jug.setMascarilla("3");
-            jug.setBolsa("4");
-            jug.setPcr("3");
-            jug.setRegeneron("1");
-        }
-        else {
             jug.mascarilla = GameManager.instance.mask;
             jug.pocion = GameManager.instance.pocion;
             jug.bolsa = GameManager.instance.bolsa;
